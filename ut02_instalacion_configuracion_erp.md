@@ -1,13 +1,15 @@
-## UT02: Instalación y configuración de un ERP
+# UT02: Instalación y configuración de un ERP
 
-### 2.1.- Introducción
+## 1.- Introducción
 
-### 2.2.- Tipos de instalación de un sistema ERP
+## 2.- Preparación de la máquina virtual e instalación de Ubuntu Server
 
-### 2.3.- Licencias de software
+## 3.- Instalación y configuración de Odoo
 
-### 2.4.- Preparación del servicio para instalar el sistema ERP
+## 4.- Instalación de Odoo en contenedores Docker
 
-### 2.5.- Instalación de un sistemas ERP Odoo 16
+### 4.1.- Instalación para producción
 
-### 2.6.- Puesta en marcha de Odoo 16
+### 4.2.- Instalación para desarrollo
+
+## 5.- Instalación en Windows con Docker Desktop
