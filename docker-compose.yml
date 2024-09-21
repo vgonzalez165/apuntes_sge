@@ -1,0 +1,30 @@
+version: '3'
+services:
+  db:
+    image: postgres:14
+    container_name: db
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=paso
+    ports:
+      - '5432:5432'
+    volumes:
+      - ~/OdooDesarrollo/dataPGdev:/var/lib/postgresql/data
+  odoo:
+    image: odoo:16
+    container_name: odoo_16
+    environment:
+      - HOST=db
+      - USER=odoo
+      - PASSWORD=paso
+    ports:
+      - '8069:8069'
+    volumes:
+      - ~/OdooDesarrollo/volumesOdoo/addons:/mnt/extra-addons
+      - ~/OdooDesarrollo/volumesOdoo/firestore:/var/lib/odoo/firestore
+      - ~/OdooDesarrollo/volumesOdoo/sessions:/var/lib/odoo/sessions
+    depends_on:
+      - db
+    command: --dev=all
+    
