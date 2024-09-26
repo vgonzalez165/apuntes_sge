@@ -2,17 +2,16 @@
 
 ## UT01: [Sistemas ERP-CRM-BI](./ut01_sistemas_erp_crm_bi.md)
 
+### Apuntes
+
 1. Introducción
 2. ¿Qué es un sistema ERP-CRM-BI?
 3. Ventajas e inconvenientes de la implantación de un sistema ERP
-4. ¿Programar ERP o personalización de sistema?
-5. Licencias privativas y libres para sistemas ERP
-6. Retos al implantar un sistema ERP
-7. Ejemplos de sistemas ERP
-
 
 
 ## UT02: [Instalación y configuración de un ERP](./ut02_instalacion_configuracion_erp.md)
+
+### Apuntes
 
 1. Introducción
 2. Tipos de instalación de un sistema ERP
@@ -21,6 +20,11 @@
 5. Instalación de un sistemas ERP Odoo 16
 6. Puesta en marcha de Odoo 16
 
+### Prácticas
+
+- [PR0200: Repositorio para entrega de prácticas](./ut02_instalacion/practicas/pr0200.md)
+- [PR0201: Preparación entorno con Docker](./ut02_instalacion/practicas/pr0201.md)
+- [PR0202: Entorno con Dockerfile]() (Opcional)
 
 
 
