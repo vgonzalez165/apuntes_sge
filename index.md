@@ -30,6 +30,8 @@
 
 ## UT03: [Implantación de un ERP en la empresa](./ut03_implantacion_erp_en_la_empresa.md)
 
+### Apuntes
+
 1. Introducción
 2. Módulo de facturación
 3. Módulo *Empleados*
@@ -39,9 +41,18 @@
 7. Otros módulos interesantes
 8. Copia de seguridad en Odoo
 
+### Prácticas
 
-### UT04.- [El lenguaje de programación Python](./ut04_python.md)
+- PR0301: Facturas
 
+
+
+## UT04.- [El lenguaje de programación Python](./ut04_python.md)
+
+### Apuntes
+
+
+### Prácticas
 
 
 
