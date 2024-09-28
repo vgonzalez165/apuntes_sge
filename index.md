@@ -21,7 +21,9 @@
 5. Instalación de un sistemas ERP Odoo 16
 6. Puesta en marcha de Odoo 16
 
+### Prácticas
 
+- [PR0201](./ut02_instalacion/pr0201.md)
 
 
 ## UT03: [Implantación de un ERP en la empresa](./ut03_implantacion_erp_en_la_empresa.md)
@@ -36,7 +38,7 @@
 8. Copia de seguridad en Odoo
 
 
-### UT04.- [El lenguaje de programación Python](./ut04_python.md)
+## UT04.- [El lenguaje de programación Python](./ut04_python.md)
 
 
 
