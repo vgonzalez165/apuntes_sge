@@ -2,17 +2,16 @@
 
 ## UT01: [Sistemas ERP-CRM-BI](./ut01_sistemas_erp_crm_bi.md)
 
+### Apuntes
+
 1. Introducción
 2. ¿Qué es un sistema ERP-CRM-BI?
 3. Ventajas e inconvenientes de la implantación de un sistema ERP
-4. ¿Programar ERP o personalización de sistema?
-5. Licencias privativas y libres para sistemas ERP
-6. Retos al implantar un sistema ERP
-7. Ejemplos de sistemas ERP
-
 
 
 ## UT02: [Instalación y configuración de un ERP](./ut02_instalacion_configuracion_erp.md)
+
+### Apuntes
 
 1. Introducción
 2. Tipos de instalación de un sistema ERP
@@ -22,11 +21,20 @@
 6. Puesta en marcha de Odoo 16
 
 ### Prácticas
+<<<<<<< HEAD
+=======
+
+- [PR0200: Repositorio para entrega de prácticas](./ut02_instalacion/practicas/pr0200.md)
+- [PR0201: Preparación entorno con Docker](./ut02_instalacion/practicas/pr0201.md)
+- [PR0202: Entorno con Dockerfile]() (Opcional)
+>>>>>>> 6ae7d9f1581953491b5105daaa354f466c9ead85
 
 - [PR0201](./ut02_instalacion/pr0201.md)
 
 
 ## UT03: [Implantación de un ERP en la empresa](./ut03_implantacion_erp_en_la_empresa.md)
+
+### Apuntes
 
 1. Introducción
 2. Módulo de facturación
@@ -37,9 +45,22 @@
 7. Otros módulos interesantes
 8. Copia de seguridad en Odoo
 
+### Prácticas
+
+<<<<<<< HEAD
+## UT04.- [El lenguaje de programación Python](./ut04_python.md)
+=======
+- PR0301: Facturas
+>>>>>>> 6ae7d9f1581953491b5105daaa354f466c9ead85
+
+
 
 ## UT04.- [El lenguaje de programación Python](./ut04_python.md)
 
+### Apuntes
+
+
+### Prácticas
 
 
 

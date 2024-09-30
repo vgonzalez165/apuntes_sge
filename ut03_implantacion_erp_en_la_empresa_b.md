@@ -4,7 +4,7 @@
 
 ### 3.1.- Introducción
 
-### 3.2.- Módulo de facturación
+### 3.2.- Módulo *Facturación*
 
 ### 3.3.- Módulo *Empleados*
 
