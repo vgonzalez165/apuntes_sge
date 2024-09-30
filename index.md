@@ -21,15 +21,10 @@
 6. Puesta en marcha de Odoo 16
 
 ### Prácticas
-<<<<<<< HEAD
-=======
 
 - [PR0200: Repositorio para entrega de prácticas](./ut02_instalacion/practicas/pr0200.md)
 - [PR0201: Preparación entorno con Docker](./ut02_instalacion/practicas/pr0201.md)
 - [PR0202: Entorno con Dockerfile]() (Opcional)
->>>>>>> 6ae7d9f1581953491b5105daaa354f466c9ead85
-
-- [PR0201](./ut02_instalacion/pr0201.md)
 
 
 ## UT03: [Implantación de un ERP en la empresa](./ut03_implantacion_erp_en_la_empresa.md)
@@ -47,11 +42,12 @@
 
 ### Prácticas
 
-<<<<<<< HEAD
-## UT04.- [El lenguaje de programación Python](./ut04_python.md)
-=======
 - PR0301: Facturas
->>>>>>> 6ae7d9f1581953491b5105daaa354f466c9ead85
+
+
+## UT04.- [El lenguaje de programación Python](./ut04_python.md)
+
+
 
 
 
