@@ -43,6 +43,7 @@
 ### Prácticas
 
 - [PR0301: Facturas](./ut03_implantacion/pr0301.md)
+- [PR0302: Inventario y Google Imágenes](./ut03_implantacion/pr0302.md)
 
 
 ## UT04.- [El lenguaje de programación Python](./ut04_python.md)
