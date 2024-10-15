@@ -50,7 +50,9 @@
 ## UT04.- [El lenguaje de programación Python](./ut04_python.md)
 
 
+### Prácticas
 
+- [PR0401: Ejercicios básicos](./ut04_python/pr0401_ejercicios_basicos.md)
 
 
 ## UT04.- [El lenguaje de programación Python](./ut04_python.md)

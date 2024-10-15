@@ -1,6 +1,6 @@
 # UT04: El lenguaje de programación Python
 
-## PR0401: Cadenas en Python
+## PR0402: Cadenas en Python
 
 ### 1. Encontrar la subcadena más larga de caracteres únicos
 Escribe un programa que encuentre la subcadena más larga en una cadena que no tenga caracteres repetidos, utilizando métodos de cadenas y estructuras auxiliares (como diccionarios o sets).
