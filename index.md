@@ -53,6 +53,7 @@
 ### Prácticas
 
 - [PR0401: Ejercicios básicos](./ut04_python/pr0401_ejercicios_basicos.md)
+- [PR0402: Ejercicios de cadenas](./ut04_python/pr0402_cadenas.md)
 
 
 ## UT04.- [El lenguaje de programación Python](./ut04_python.md)
