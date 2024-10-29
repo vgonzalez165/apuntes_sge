@@ -54,6 +54,7 @@
 
 - [PR0401: Ejercicios básicos](./ut04_python/pr0401_ejercicios_basicos.md)
 - [PR0402: Ejercicios de cadenas](./ut04_python/pr0402_cadenas.md)
+- [PR0403: Ejercicios con listas](./ut04_python/pr0403_listas.md)
 
 
 ## UT04.- [El lenguaje de programación Python](./ut04_python.md)
