@@ -2,9 +2,11 @@
 
 ## PR0403: Ejercicios con listas
 
+**NOTA**: para poder evaluar esta práctica como APTA debes haber realizado, por lo menos, 12 ejercicios de los propuestos.
+
 ### 1. Operaciones con listas
 
-Para estos ejercicios vas a utilizar la siguiente lista:
+Para todos los apartados de este primer ejercicio vas a utilizar la siguiente lista:
 
 ```python
 nombres = [
@@ -14,36 +16,36 @@ nombres = [
 
 Crea varios programas que  realicen las siguientes tareas con la lista anterior:
 
-- **Ordenando elementos**: Mostrar los nombres ordenados alfabéticamente en orden inverso.
-- **Contando elementos**: Contar el número de nombres que comienzan con la letra `a`
-- **Buscar un elementos**: Pregunte al usuario su nombre y le indique si está en la lista, y en caso afirmativo, en qué posición está.
-- **Primeros elementos**: Pregunte al usuario su nombre y le muestre el listado de todos los nombres que se encuentran delante del suyo.
-- **Obtener número de nombres de una longitud**: Pregunte al usuario un número y le diga cuántos nombres hay en la lista con la misma longitud que el número indicado
-- **Nombres cortos**: Muestre todos los nombres cuya longitud sea igual o inferior a 4 caracteres
-- **Número de vocales**: Indique cuántas veces se repite cada una de las vocales entre todos los nombres (ignorando mayúsculas y minúsculas)
-- **Número de letras**: Imprima el número de veces que se repite cada letra del abecedario entre todos los elementos de la lista.
+1. **Ordenando elementos**: Mostrar los nombres ordenados alfabéticamente en orden inverso.
+2. **Contando elementos**: Contar el número de nombres que comienzan con la letra `a`
+3. **Buscar un elementos**: Pregunte al usuario su nombre y le indique si está en la lista, y en caso afirmativo, en qué posición está.
+4. **Primeros elementos**: Pregunte al usuario su nombre y le muestre el listado de todos los nombres que se encuentran delante del suyo.
+5. **Obtener número de nombres de una longitud**: Pregunte al usuario un número y le diga cuántos nombres hay en la lista con la misma longitud que el número indicado
+6. **Nombres cortos**: Muestre todos los nombres cuya longitud sea igual o inferior a 4 caracteres
+7. **Número de vocales**: Indique cuántas veces se repite cada una de las vocales entre todos los nombres (ignorando mayúsculas y minúsculas)
+8. **Número de letras**: Imprima el número de veces que se repite cada letra del abecedario entre todos los elementos de la lista.
 
 ---
 
 ### 2. Más ejercicios con listas
 
-- **Sumar elementos de una lista**: Dada una lista de números, escribe un programa que calcule y muestre la suma de todos sus elementos.
+9. **Sumar elementos de una lista**: Dada una lista de números, escribe un programa que calcule y muestre la suma de todos sus elementos.
 
-- **Contar elementos específicos**: Dada una lista de palabras, permite al usuario ingresar una palabra y cuenta cuántas veces aparece en la lista.
+10. **Contar elementos específicos**: Dada una lista de palabras, permite al usuario ingresar una palabra y cuenta cuántas veces aparece en la lista.
 
-- **Eliminar duplicados**: Dada una lista de números, elimina todos los elementos duplicados y muestra la lista con solo valores únicos.
+11. **Eliminar duplicados**: Dada una lista de números, elimina todos los elementos duplicados y muestra la lista con solo valores únicos.
 
-- **Máximo y mínimo**: Escribe una función que tome una lista de números y devuelva el valor máximo y mínimo de la lista.
+12. **Máximo y mínimo**: Escribe una función que tome una lista de números y devuelva el valor máximo y mínimo de la lista.
 
-- **Filtrar números pares**: Dada una lista de números, genera una nueva lista que contenga solo los números pares.
+13. **Filtrar números pares**: Dada una lista de números, genera una nueva lista que contenga solo los números pares.
 
-- **Revertir una lista**: Escribe una función que tome una lista y devuelva una nueva lista con los elementos en orden inverso, sin utilizar el método `.reverse()`.
+14. **Revertir una lista**: Escribe una función que tome una lista y devuelva una nueva lista con los elementos en orden inverso, sin utilizar el método `.reverse()`.
 
-- **Concatenar listas**: Dadas dos listas de números, crea una función que devuelva una tercera lista que contenga los elementos de ambas listas intercalados.
+15. **Concatenar listas**: Dadas dos listas de números, crea una función que devuelva una tercera lista que contenga los elementos de ambas listas intercalados.
 
-- **Encuentra elementos comunes**: Escribe un programa que tome dos listas y devuelva una nueva lista con los elementos que son comunes en ambas.
+16. **Encuentra elementos comunes**: Escribe un programa que tome dos listas y devuelva una nueva lista con los elementos que son comunes en ambas.
 
-- **Dividir una lista**: Dada una lista de números, crea dos listas: una con los números mayores o iguales a la media y otra con los números menores a la media.
+17. **Dividir una lista**: Dada una lista de números, crea dos listas: una con los números mayores o iguales a la media y otra con los números menores a la media.
 
-- **Lista de listas**: Crea una lista de listas que represente una matriz de números y escribe una función que devuelva la suma de cada fila y columna.
+18. **Lista de listas**: Crea una lista de listas que represente una matriz de números y escribe una función que devuelva la suma de cada fila y columna.
 
