@@ -5,9 +5,13 @@
 **NOTA**: para poder evaluar esta práctica como APTA debes haber realizado, por lo menos, 6 ejercicios de los propuestos.
 
 
-1. **Buscar un valor en un diccionario**: Crea un diccionario de frutas y precios. Permite al usuario ingresar el nombre de una fruta y muestra su precio si existe en el diccionario, o un mensaje de que no está disponible en caso contrario.
+### 1.- Buscar valor en un diccionario
 
-2. **Contar elementos en un diccionario**: Suponiendo un diccionario con al siguiente estructura, crea un programa que calcule cuántas categorías hay, cuántos productos tiene cada categoría y cuántos productos hay en total.
+Crea un diccionario de frutas y precios. Permite al usuario ingresar el nombre de una fruta y muestra su precio si existe en el diccionario, o un mensaje de que no está disponible en caso contrario.
+
+### 2.- Contar elementos en un diccionario
+
+Suponiendo un diccionario con al siguiente estructura, crea un programa que calcule cuántas categorías hay, cuántos productos tiene cada categoría y cuántos productos hay en total.
 
     ```bash
     productos = {
@@ -19,12 +23,17 @@
     }
     ```
 
-3. **Contador de frecuencias de palabras**: Escribe un programa que tome una frase y use un diccionario para contar la frecuencia de cada palabra.
+### 3.- Contador de frecuencias de palabras
 
-4. **Diccionario de listas**: Supón un diccionario donde cada clave es una asignatura y el valor correspondiente una lista de estudiantes matriculados, tal como se muestra en el diccionario de ejemplo. Crea un programa que tenga un menú con tres opciones:
-    - Listar estudiantes matriculados en una asignatura
-    - Matricular un estudiante en una asignatura
-    - Dar de baja un estudiante de una asignatura.
+Escribe un programa que tome una frase y use un diccionario para contar la frecuencia de cada palabra.
+
+### 4.- Diccionario de listas
+
+Supón un diccionario donde cada clave es una asignatura y el valor correspondiente una lista de estudiantes matriculados, tal como se muestra en el diccionario de ejemplo. Crea un programa que tenga un menú con tres opciones:
+- Listar estudiantes matriculados en una asignatura
+- Matricular un estudiante en una asignatura
+- Dar de baja un estudiante de una asignatura.
+
 
     ```python
     asignaturas = {
@@ -36,14 +45,23 @@
     }
     ```
 
-5. **Diccionario invertido**: Escribe una función que tome un diccionario y devuelva otro con las claves y valores intercambiados (lo que antes eran valores ahora son claves, y viceversa). 
 
-6. **Combinar dos diccionarios**: Escribe un programa que tome dos diccionarios de productos y precios, y combine los productos comunes sumando sus precios, sin duplicar los elementos únicos.
+### 5.- Diccionario invertido
 
-7. **Filtrar claves y valores**: Dado un diccionario de empleados y salarios, filtra e imprime solo los empleados con un salario mayor a un umbral definido.
+Escribe una función que tome un diccionario y devuelva otro con las claves y valores intercambiados (lo que antes eran valores ahora son claves, y viceversa). 
+
+### 6.- Combinar dos diccionarios
+
+Escribe un programa que tome dos diccionarios de productos y precios, y combine los productos comunes sumando sus precios, sin duplicar los elementos únicos.
+
+### 7.- Filtrar claves y valores
+
+Dado un diccionario de empleados y salarios, filtra e imprime solo los empleados con un salario mayor a un umbral definido.
 
 
-8. **Anidación de diccionarios**: Partiendo de un diccionario donde las claves son nombres de departamentos y los valores, diccionarios de empleados y sus puestos, tal como se ve en el código de ejemplo, crea un programa que permita realizar las siguientes funciones:
+### 8.- Anidación de diccionarios
+
+Partiendo de un diccionario donde las claves son nombres de departamentos y los valores, diccionarios de empleados y sus puestos, tal como se ve en el código de ejemplo, crea un programa que permita realizar las siguientes funciones:
    - Mostrar el listado de todos los empleados de un departamento
    - Añadir un empleado a un departamento
    - Eliminar un empleado de un departamento
@@ -74,9 +92,11 @@
     ```
 
 
-9. **Transformación de datos**: Dado un diccionario con claves como nombres de estudiantes y valores como una lista de calificaciones, haz un programa que:
-    - Cree un nuevo diccionario que contenga el promedio de calificaciones para cada estudiante
-    - Crea otro diccionario que contengan la nota promedio en cada asignatura
+### 9.- Transformación de datos
+
+Dado un diccionario con claves como nombres de estudiantes y valores como una lista de calificaciones, haz un programa que:
+- Cree un nuevo diccionario que contenga el promedio de calificaciones para cada estudiante
+- Crea otro diccionario que contengan la nota promedio en cada asignatura
 
 
     ```python
