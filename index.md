@@ -56,6 +56,7 @@
 - [PR0402: Ejercicios de cadenas](./ut04_python/pr0402_cadenas.md)
 - [PR0403: Ejercicios con listas](./ut04_python/pr0403_listas.md)
 - [PR0404: Ejercicios con diccionarios](./ut04_python/pr0404_diccionarios.md)
+- [PR0405: Programación funcional](./ut04_python/pr0405_programacion_funcional.md)
 
 
 
