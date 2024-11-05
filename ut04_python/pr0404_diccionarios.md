@@ -91,5 +91,4 @@ estudiantes = {
 ```
 
 
-10. **Contar palabras en un texto**: Escribe un programa que lea un archivo de texto y cuente cuántas veces aparece cada palabra, almacenando las frecuencias en un diccionario.
 
