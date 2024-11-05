@@ -9,15 +9,15 @@
 
 2. **Contar elementos en un diccionario**: Suponiendo un diccionario con al siguiente estructura, crea un programa que calcule cuántas categorías hay, cuántos productos tiene cada categoría y cuántos productos hay en total.
 
-```bash
-productos = {
-    "Electrónica": ["Smartphone", "Laptop", "Tablet", "Auriculares", "Smartwatch"],
-    "Hogar": ["Aspiradora", "Microondas", "Lámpara", "Sofá", "Cafetera"],
-    "Ropa": ["Camisa", "Pantalones", "Chaqueta", "Zapatos", "Bufanda"],
-    "Deportes": ["Pelota de fútbol", "Raqueta de tenis", "Bicicleta", "Pesas", "Cuerda de saltar"],
-    "Juguetes": ["Muñeca", "Bloques de construcción", "Peluche", "Rompecabezas", "Coche de juguete"],
-}
-```
+    ```bash
+    productos = {
+        "Electrónica": ["Smartphone", "Laptop", "Tablet", "Auriculares", "Smartwatch"],
+        "Hogar": ["Aspiradora", "Microondas", "Lámpara", "Sofá", "Cafetera"],
+        "Ropa": ["Camisa", "Pantalones", "Chaqueta", "Zapatos", "Bufanda"],
+        "Deportes": ["Pelota de fútbol", "Raqueta de tenis", "Bicicleta", "Pesas", "Cuerda de saltar"],
+        "Juguetes": ["Muñeca", "Bloques de construcción", "Peluche", "Rompecabezas", "Coche de juguete"],
+    }
+    ```
 
 3. **Contador de frecuencias de palabras**: Escribe un programa que tome una frase y use un diccionario para contar la frecuencia de cada palabra.
 
@@ -26,15 +26,15 @@ productos = {
     - Matricular un estudiante en una asignatura
     - Dar de baja un estudiante de una asignatura.
 
-```python
-asignaturas = {
-    "Matemáticas": ["Ana", "Carlos", "Luis", "María", "Jorge"],
-    "Física": ["Elena", "Luis", "Juan", "Sofía"],
-    "Programación": ["Ana", "Carlos", "Sofía", "Jorge", "Pedro"],
-    "Historia": ["María", "Juan", "Elena", "Ana"],
-    "Inglés": ["Carlos", "Sofía", "Jorge", "María"],
-}
-```
+    ```python
+    asignaturas = {
+        "Matemáticas": ["Ana", "Carlos", "Luis", "María", "Jorge"],
+        "Física": ["Elena", "Luis", "Juan", "Sofía"],
+        "Programación": ["Ana", "Carlos", "Sofía", "Jorge", "Pedro"],
+        "Historia": ["María", "Juan", "Elena", "Ana"],
+        "Inglés": ["Carlos", "Sofía", "Jorge", "María"],
+    }
+    ```
 
 5. **Diccionario invertido**: Escribe una función que tome un diccionario y devuelva otro con las claves y valores intercambiados (lo que antes eran valores ahora son claves, y viceversa). 
 
@@ -48,30 +48,30 @@ asignaturas = {
    - Añadir un empleado a un departamento
    - Eliminar un empleado de un departamento
 
-```python
-departamentos = {
-    "Recursos Humanos": {
-        "Ana": "Gerente de Recursos Humanos",
-        "Luis": "Especialista en Reclutamiento",
-        "Elena": "Asistente de Recursos Humanos"
-    },
-    "Tecnología": {
-        "Carlos": "Desarrollador Backend",
-        "María": "Desarrolladora Frontend",
-        "Pedro": "Administrador de Sistemas"
-    },
-    "Marketing": {
-        "Sofía": "Directora de Marketing",
-        "Jorge": "Especialista en SEO",
-        "Laura": "Community Manager"
-    },
-    "Finanzas": {
-        "Juan": "Analista Financiero",
-        "Lucía": "Contadora",
-        "Raúl": "Asesor Financiero"
+    ```python
+    departamentos = {
+        "Recursos Humanos": {
+            "Ana": "Gerente de Recursos Humanos",
+            "Luis": "Especialista en Reclutamiento",
+            "Elena": "Asistente de Recursos Humanos"
+        },
+        "Tecnología": {
+            "Carlos": "Desarrollador Backend",
+            "María": "Desarrolladora Frontend",
+            "Pedro": "Administrador de Sistemas"
+        },
+        "Marketing": {
+            "Sofía": "Directora de Marketing",
+            "Jorge": "Especialista en SEO",
+            "Laura": "Community Manager"
+        },
+        "Finanzas": {
+            "Juan": "Analista Financiero",
+            "Lucía": "Contadora",
+            "Raúl": "Asesor Financiero"
+        }
     }
-}
-```
+    ```
 
 
 9. **Transformación de datos**: Dado un diccionario con claves como nombres de estudiantes y valores como una lista de calificaciones, haz un programa que:
@@ -79,16 +79,16 @@ departamentos = {
     - Crea otro diccionario que contengan la nota promedio en cada asignatura
 
 
-```python
-estudiantes = {
-    "Ana": {"Matemáticas": 8.5, "Física": 9.0, "Programación": 7.8},
-    "Carlos": {"Matemáticas": 9.2, "Física": 8.8, "Programación": 9.4},
-    "Luis": {"Matemáticas": 7.6, "Física": 8.0, "Programación": 8.5},
-    "María": {"Matemáticas": 9.5, "Física": 10.0, "Programación": 9.8},
-    "Jorge": {"Matemáticas": 8.8, "Física": 8.4, "Programación": 7.9},
-    "Sofía": {"Matemáticas": 9.1, "Física": 8.9, "Programación": 9.3}
-}
-```
+    ```python
+    estudiantes = {
+        "Ana": {"Matemáticas": 8.5, "Física": 9.0, "Programación": 7.8},
+        "Carlos": {"Matemáticas": 9.2, "Física": 8.8, "Programación": 9.4},
+        "Luis": {"Matemáticas": 7.6, "Física": 8.0, "Programación": 8.5},
+        "María": {"Matemáticas": 9.5, "Física": 10.0, "Programación": 9.8},
+        "Jorge": {"Matemáticas": 8.8, "Física": 8.4, "Programación": 7.9},
+        "Sofía": {"Matemáticas": 9.1, "Física": 8.9, "Programación": 9.3}
+    }
+    ```
 
 
 
