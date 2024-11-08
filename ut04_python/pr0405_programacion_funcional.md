@@ -137,7 +137,7 @@ Implementa una función que tome una lista de funciones y una lista de números,
 # Ejemplo de funciones y lista de entrada
 funciones = [lambda x: x*2, lambda x: x+3, lambda x: x-1]
 numeros = [1, 2, 3]
-# Resultado esperado: [((1*2)+3)-1, ((2*2)+3)-1, ((3*2)+3)-1] -> [4, 7, 9]
+# Resultado esperado: [((1*2)+3)-1, ((2*2)+3)-1, ((3*2)+3)-1] -> [4, 6, 8]
 ```
 
 ### 14.- Aplicar operaciones de cadena
