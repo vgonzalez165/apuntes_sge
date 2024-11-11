@@ -1,5 +1,11 @@
 # SISTEMAS DE GESTIÓN EMPRESARIAL
 
+
+## PROYECTOS
+
+- Proyecto de la 1ª Evaluación
+- Proyecto de la 2ª Evaluación
+
 ## UT01: [Sistemas ERP-CRM-BI](./ut01_sistemas_erp_crm_bi.md)
 
 ### Apuntes
