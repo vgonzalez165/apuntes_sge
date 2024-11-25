@@ -65,10 +65,9 @@
 - [PR0405: Programación funcional](./ut04_python/pr0405_programacion_funcional.md)
 
 
-
-
-
 ## UT05: [Entorno de desarrollo y primer módulo Odoo](./ut05_entorno_desarrollo_primer_modulo.md)
+
+### Apuntes
 
 1. Introducción
 2. Creando un directorio para los módulos
@@ -78,7 +77,9 @@
 6. Creando módulos en Odoo
 7. Ejemplo de módulo
 
+### Prácticas
 
+- [PR0501: Primer módulo en Odoo](./ut05_creacion_modulos/pr0501_modulo_sencillo.md)
 
 
 ## UT06: [Desarrollo de módulos de Odoo: Modelo y vista](./ut06_desarrollo_modulos_modelo_vista.md)
