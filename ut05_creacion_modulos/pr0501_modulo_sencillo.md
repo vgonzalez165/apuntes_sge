@@ -29,8 +29,12 @@ El módulo incluirá un sistema de menús con tres niveles. Los menús tendrán 
 Gestión de salas
    |
    |-- Salas
+   |     |
+   |     |--Salas Disponibles
+   |
+   |- Reservas
          |
-         |--Salas Disponibles
+         |- Reservas realizadas (este menú no tendrá acción asociada)
 ```
 
 ### ¿Qué hay que entregar?
