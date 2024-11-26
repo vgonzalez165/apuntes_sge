@@ -10,7 +10,8 @@ En esta práctica repasaremos los conceptos básicos de creación de módulos en
 
 A continuación se indican algunos recursos que complementan los apuntes del módulo y que te pueden ser útiles para realizar esta práctica:
 
-- [Campos básicos del modelo](https://www.cybrosys.com/blog/field-types-and-widgets-in-odoo-16)
+- [Campos básicos del modelo](https://www.odoo.com/documentation/16.0/es/developer/reference/backend/orm.html#basic-fields)
+- [Tipos de campos y widgets en Odoo 16](https://www.cybrosys.com/blog/field-types-and-widgets-in-odoo-16)
 
 
 ### ¿Qué hay que hacer?
