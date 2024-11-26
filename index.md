@@ -80,6 +80,7 @@
 ### Prácticas
 
 - [PR0501: Primer módulo en Odoo](./ut05_creacion_modulos/pr0501_modulo_sencillo.md)
+- [PR0502: Módulo con dos modelos](./ut05_creacion_modulos/pr0502_modulo_dos_modelos.md)
 
 
 ## UT06: [Desarrollo de módulos de Odoo: Modelo y vista](./ut06_desarrollo_modulos_modelo_vista.md)
