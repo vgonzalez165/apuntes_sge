@@ -1,6 +1,6 @@
 # UT05: Desarrollo de componentes. Primer módulo
 
-## PR0501: Creación de un módulo básico
+## PR0502: Módulo con dos modelos
 
 ### ¿Qué vamos a aprender?
 

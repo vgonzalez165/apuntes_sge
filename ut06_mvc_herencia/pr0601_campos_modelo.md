@@ -1,6 +1,6 @@
-# UT05: Desarrollo de componentes. Primer módulo
+# UT06: Desarrollo de componentes: MVC y herencia
 
-## PR0501: Creación de un módulo básico
+## PR0601: Campos del modelo
 
 ### ¿Qué vamos a aprender?
 

@@ -81,19 +81,21 @@
 
 - [PR0501: Primer módulo en Odoo](./ut05_creacion_modulos/pr0501_modulo_sencillo.md)
 - [PR0502: Módulo con dos modelos](./ut05_creacion_modulos/pr0502_modulo_dos_modelos.md)
-- [PR0503: Campos del modelo](./ut05_creacion_modulos/pr0503_campos_modelo.md)
+
 
 
 ## UT06: [Desarrollo de módulos de Odoo: Modelo y vista](./ut06_desarrollo_modulos_modelo_vista.md)
 
 1. Introducción
-2. La base de datos de Odoo
-3. Composición de un módulo
-4. Modelos
-5. vista
-6. Seguridad en modelos Odoo
-7. Módulo de ejemplo con comentarios
+2. Modelos
+3. La base de datos de Odoo
+4. Vista
+5. Seguridad en modelos Odoo
+6. Módulo de ejemplo con comentarios
 
+### Prácticas
+
+- [PR0601: Campos del modelo](./ut06_mvc_herencia/pr0601_campos_modelo.md)
 
 
 ## UT07: [Desarrollo de módulos de Odoo: Controlador, Herencia y Web Controllers](./ut07_desarrollo_modulos_controlador_herencia.md)
