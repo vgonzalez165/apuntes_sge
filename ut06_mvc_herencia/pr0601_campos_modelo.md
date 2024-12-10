@@ -24,7 +24,7 @@ Desarrolla un módulo en Odoo llamado gestion_productos que permita gestionar un
   - **Código de producto**, este campo debe ser obligatorio
   - **Imagen del producto**
 - Categoría y tipo de producto:
-  - **Categoría**: el usuario podrá escoger entre *Electrónica*, *Hogar* y *Ropa*
+  - **Categoría**: el usuario podrá escoger entre *Jardín*, *Hogar* y *Electrodomésticos*
   - **Tipo de producto**: indica si es un producto destacable o no.
 - Información económica:
   - **Precio de venta**
