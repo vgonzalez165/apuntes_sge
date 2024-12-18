@@ -35,7 +35,6 @@ Vamos a crear un módulo sobre gestión de productos. Las características que t
   - **Python**:
     - El precio debe ser mayor que 0
     - La cantidad debe ser mayor o igual a 0
-    - La cantidad mínima debe ser igual o inferior que la cantidad
     - El valor total del stock no puede ser superior a 100000 unidades monetarias
     - No se permiten productos sin categoría
 
