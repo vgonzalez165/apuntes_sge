@@ -26,7 +26,7 @@ Las características que tiene que tener este módulo son:
 - Debes organizar tanto el modelo como las vistas en diferentes ficheros, tal como vimos en la última práctica de la unidad anterior.
 - El módulo tendrá los siguientes modelos:
   - **Libros**: cada libro tendrá un título, un autor, un género (novela, drama, ciencia ficción, misterio, terror, histórico) y puede ser prestado a varios socios.
-  - **Autores**: un autor tendrá un nombre, un país de origen (recuerda que Odoo tiene un modelo llamado `res_country` que contiene los países) y podrá tener varios libros escritos.
+  - **Autores**: un autor tendrá un nombre, un país de origen (recuerda que Odoo tiene un modelo llamado `res.country` que contiene los países) y podrá tener varios libros escritos.
   - **Socios**: puedes poner algún dato general como nombre o teléfono, y además podrá pedir prestados varios libros.
 
 
