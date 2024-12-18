@@ -97,6 +97,7 @@
 
 - [PR0601: Campos del modelo](./ut06_mvc_herencia/pr0601_campos_modelo.md)
 - [PR0602: Campos relacionales](./ut06_mvc_herencia/pr0602_campos_relacionales.md)
+- [PR0603: Campos calculados y restricciones](./ut06_mvc_herencia/pr0603_campos_calculados_restricciones.md)
 
 
 ## UT07: [Desarrollo de módulos de Odoo: Controlador, Herencia y Web Controllers](./ut07_desarrollo_modulos_controlador_herencia.md)
