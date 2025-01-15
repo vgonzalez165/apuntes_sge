@@ -99,6 +99,7 @@
 - [PR0602: Campos relacionales](./ut06_mvc_herencia/pr0602_campos_relacionales.md)
 - [PR0603: Campos calculados y restricciones](./ut06_mvc_herencia/pr0603_campos_calculados_restricciones.md)
 - [PR0604: Vistas de tipo lista](./ut06_mvc_herencia/pr0604_vista_tree.md)
+- [PR0605: Vistas de tipo formulario](./ut06_mvc_herencia/pr0605_vista_form.md)
 
 
 ## UT07: [Desarrollo de módulos de Odoo: Controlador, Herencia y Web Controllers](./ut07_desarrollo_modulos_controlador_herencia.md)
