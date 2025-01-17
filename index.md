@@ -114,6 +114,9 @@
 8. CORS con Odoo
 9. API REST
 
+### Prácticas
+
+- [PR0701: Página estática y dinámica básica](./ut07_web_controllers_cliente_web/pr0701_pagina_estatica_dinamica.md)
 
 
 ## UT08: [Cliente Web en Odoo](./ut08_cliente_web.md)
