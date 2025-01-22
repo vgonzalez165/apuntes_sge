@@ -117,6 +117,7 @@
 ### Prácticas
 
 - [PR0701: Página estática y dinámica básica](./ut07_web_controllers_cliente_web/pr0701_pagina_estatica_dinamica.md)
+- [PR0702: API REST](./ut07_web_controllers_cliente_web/pr0702_api_rest.md)
 
 
 ## UT08: [Cliente Web en Odoo](./ut08_cliente_web.md)
