@@ -4,7 +4,7 @@
 ## PROYECTOS
 
 - [Proyecto de la 1ª Evaluación](./proyectos/proyecto_ev1.md)
-- Proyecto de la 2ª Evaluación
+- [Proyecto de la 2ª Evaluación](./proyectos/proyecto_ev2.md)
 
 ## UT01: [Sistemas ERP-CRM-BI](./ut01_sistemas_erp_crm_bi.md)
 
