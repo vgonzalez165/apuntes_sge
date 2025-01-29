@@ -36,55 +36,60 @@ El modelo tendrá los siguientes campos:
    - **Campo calculado**: `(Cancelaciones / Suscripciones Activas) * 100`
    - **Ejemplo**: `10.2` (10.2%).
 
-6. **Nuevas suscripciones**:
+6. **Renovaciones**:
+   - **Tipo**: `Integer`
+   - **Descripción**: suscripciones que se han renovado.
+   - **Ejemplo**: `40`
+
+7. **Nuevas suscripciones**:
    - **Tipo**: `Integer`
    - **Descripción**: cantidad de nuevas suscripciones registradas en el período.
    - **Ejemplo**: `25`.
 
-7. **Suscripciones canceladas**:
+8. **Suscripciones canceladas**:
    - **Tipo**: `Integer`
    - **Descripción**: cantidad de suscripciones canceladas en el período.
    - **Ejemplo**: `15`.
 
-8. **Clientes recurrentes vs nuevos**:
+9. **Clientes recurrentes vs nuevos**:
    - **Tipo**: `Integer` (dos campos separados)
    - **Descripción**:
      - `Clientes recurrentes`: número de clientes que renovaron su suscripción.
      - `Nuevos clientes`: número de clientes que adquirieron una suscripción por primera vez.
    - **Ejemplo**: `Recurrentes: 120`, `Nuevos: 30`.
 
-9. **Ingresos promedio por usuario (ARPU)**:
+10. **Ingresos promedio por usuario (ARPU)**:
    - **Tipo**: `Float`
    - **Descripción**: ingresos totales divididos por el número de suscripciones activas.
    - **Campo calculado**: `Ingresos Generados / Suscripciones Activas`.
    - **Ejemplo**: `33.33`.
 
-10. **Tasa de conversión**:
+11. **Tasa de conversión**:
     - **Tipo**: `Float`
     - **Descripción**: porcentaje de visitantes o leads que se convirtieron en suscriptores.
     - **Ejemplo**: `5.0` (5%).
 
-11. **Churn Rate (Tasa de Pérdida de Clientes)**:
+12. **Churn Rate (Tasa de Pérdida de Clientes)**:
     - **Tipo**: `Float`
     - **Descripción**: porcentaje de clientes que cancelaron sus suscripciones en comparación con el total de clientes activos.
     - **Ejemplo**: `8.5` (8.5%).
 
-12. **Lifetime Value (LTV)**:
+13. **Lifetime Value (LTV)**:
     - **Tipo**: `Float`
     - **Descripción**: valor estimado que un cliente genera durante toda su relación con la empresa.
     - **Ejemplo**: `500.00`.
 
-13. **Costo de adquisición de clientes (CAC)**:
+14. **Costo de adquisición de clientes (CAC)**:
     - **Tipo**: `Float`
     - **Descripción**: costo total de marketing y ventas dividido por el número de nuevos clientes adquiridos.
     - **Ejemplo**: `50.00`.
 
-14. **Notas**:
+15. **Notas**:
     - **Tipo**: `Text`
     - **Descripción**: campo opcional para agregar observaciones o comentarios sobre las métricas.
     - **Ejemplo**: `"Promoción activa durante este período"`.
 
-15. **Relación con el Modelo de Suscripciones**:
+16. **Relación con el Modelo de Suscripciones**:
    - **Tipo**: `Uno a muchos` (desde Métricas hacia Suscripciones).
    - **Descripción**: permite vincular las métricas con las suscripciones activas o canceladas en un período específico.
 
