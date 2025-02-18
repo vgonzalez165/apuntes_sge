@@ -64,6 +64,11 @@
 - [PR0404: Ejercicios con diccionarios](./ut04_python/pr0404_diccionarios.md)
 - [PR0405: Programación funcional](./ut04_python/pr0405_programacion_funcional.md)
 
+### Prácticas de repaso
+
+- [PR04R1: Gestión de alumnos](./ut04_python/pr04r1_gestion_alumnos.md)
+
+
 
 ## UT05: [Entorno de desarrollo y primer módulo Odoo](./ut05_entorno_desarrollo_primer_modulo.md)
 
