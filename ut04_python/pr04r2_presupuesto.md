@@ -54,3 +54,12 @@ La aplicación deberá tener un menú con las siguientes opciones:
 - Utiliza **funciones** para organizar el código. Recuerda que las funciones tienes que ser pequeñas y específicas, lo ideal es que cada función haga una única cosa y que la haga bien.
 - **Divide el programa en tareas pequeñas** y vete avanzando poco a poco. Cada vez que implementes una funcionalidad, asegúrate de probarla bien antes de pasar a la siguiente.
 - **Mantén el código limpio y legible**, utiliza comentarios y asigna nombres de variables representativos de lo que van a contener.
+- Para mostrar información de **forma tabulada** por pantalla, puedes utilizar las características de las *f-strings* de Python que, entre otras funciones, permiten indicar el ancho mínimo que ocupará una cadena al imprimirla. Puedes acudir a la [documentación oficial](https://docs.python.org/es/3.13/tutorial/inputoutput.html#formatted-string-literals) para verlo en más detalle.
+
+    ```python
+    >>> desc = 'Comida'
+    >>> cant = 45
+    # La cadena desc ocupará por lo menos 10 caracteres y cant otros 10, ajustando el contenido a la deracha
+    >>> print( f'{desc:10} - {cant:10d}' )
+    Comida     -         45
+    ```
