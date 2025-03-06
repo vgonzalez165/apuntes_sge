@@ -67,6 +67,7 @@
 ### Prácticas de repaso
 
 - [PR04R1: Gestión de alumnos](./ut04_python/pr04r1_gestion_alumnos.md)
+- [PR04R2: Aplicación de presupuesto personal](./ut04_python/pr04r2_presupuesto.md)
 
 
 
