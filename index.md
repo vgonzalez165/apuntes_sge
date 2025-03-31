@@ -70,7 +70,7 @@
 - [PR04R2: Aplicación de presupuesto personal](./ut04_python/pr04r2_presupuesto.md)
 - [PR04R3: Reservas restaurante](./ut04_python/pr04r3_reservas_restaurante.md)
 - [PR04R4: Gestión de una biblioteca](./ut04_python/pr04r4_biblioteca.md)
-
+- [PR0405: Gestión de viajes en coche](./ut04_python/pr04r5_viajes.md)
 
 
 ## UT05: [Entorno de desarrollo y primer módulo Odoo](./ut05_entorno_desarrollo_primer_modulo.md)
