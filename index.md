@@ -33,6 +33,11 @@
 - [PR0202: Entorno con Dockerfile]() (Opcional)
 
 
+### Prácticas de repaso
+
+- [PR02R1: Entorno con Docker](./ut02_instalacion/practicas/pr02r1.md)
+
+
 ## UT03: [Implantación de un ERP en la empresa](./ut03_implantacion_erp_en_la_empresa.md)
 
 ### Apuntes
