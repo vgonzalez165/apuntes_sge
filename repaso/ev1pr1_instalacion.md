@@ -1,6 +1,6 @@
-# UT02: Instalación y configuración de un ERP
+# PRÁCTICAS REPASO 1ª EVALUACIÓN
 
-## PR0202: Entorno con Dockerfile 
+## EV1PR1: Entorno con Dockerfile 
 
 Vamos a preparar un entorno de trabajo con Docker para trabajar con Odoo en desarrollo. El objetivo será levantar lo siguientes contenedores:
 - Uno con Odoo 16 

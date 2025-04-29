@@ -1,6 +1,6 @@
-# UT04: El lenguaje de programación Python
+# PRÁCTICAS REPASO 1ª EVALUACIÓN
 
-## PR04R5: Gestión de viajes en coche
+## EV1PR6: Gestión de viajes en coche
 
 Debes desarrollar un programa en Python que permita gestionar viajes, almacenar información relevante y realizar cálculos automáticos como costes, distancias o duraciones en función de los datos introducidos
 

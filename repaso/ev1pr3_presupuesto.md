@@ -1,6 +1,6 @@
-# UT04: El lenguaje de programación Python
+# PRÁCTICAS REPASO 1ª EVALUACIÓN
 
-## PR04R2: Calculadora de presupuesto personal
+## EV1PR3: Calculadora de presupuesto personal
 
 ### Introducción
 

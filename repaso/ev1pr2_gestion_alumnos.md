@@ -1,6 +1,6 @@
-# UT04: El lenguaje de programación Python
+# PRÁCTICAS REPASO 1ª EVALUACIÓN
 
-## PR04R1: Gestión de alumnos
+## EV1PR2: Gestión de alumnos
 
 Vamos a crear un programa que permitirá gestionar las notas de los alumnos de un curso y calcular diversas estadísticas.
 
