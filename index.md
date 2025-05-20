@@ -51,6 +51,7 @@
 ### Segunda evaluación
 
 - [EV2PR1: Gestión de un taller mecánico](./repaso/ev2pr1_gestion_taller.md)
+- [EV2PR2: Gestión de una biblioteca escolar](./repaso/ev2pr2_biblioteca.md)
 
 
 
