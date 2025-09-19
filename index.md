@@ -9,9 +9,31 @@
 
 ## PRÁCTICAS
 
-### Primera evaluación
+### UT02: Instalación y configuración de sistemas ERP-CRM
 
 - [PR0200: Repositorio para entrega de prácticas](./ut02_instalacion/practicas/pr0200.md)
+
+
+### UT03: Implantación de ERP en la empresa
+
+
+### UT04: El lenguaje de programación Python
+
+- [PR0401: Ejercicios básicos de Python](./ut04_python/pr0401_ejercicios_basicos.md)
+- [PR0402: Ejercicios con cadenas]
+- [PR0403: Listas en Python]
+- [PR0404: Diccionarios]
+- [PR0405: Ejercicios de programación funcional]
+
+### UT05: Desarrollo de componentes: primer módulo de Odoo
+
+
+### UT06: Desarrollo de componentes: MVC y herencia
+
+
+### UT07: Web Controllers y cliente web
+
+
 
 
 <!-- 

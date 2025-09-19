@@ -105,3 +105,86 @@ fib(0) = 1
 fib(1) = 1
 fib(n) = fib(n-2) + fib(n-1)
 ```
+
+---
+
+### 10. Números primos
+
+Crea un programa que solicite un número al usuario y le diga si es primo o no.
+Un número primo solo es divisible por 1 y por sí mismo.
+
+---
+
+### 11. Factorial de un número
+
+Crea un programa que pida un número entero `n` y calcule su factorial.
+Recuerda que el factorial de un número `n` (denotado como `n!`) se define como:
+
+```
+n! = 1 * 2 * 3 * ... * n
+```
+
+* **Ejemplo**: `5! = 120`.
+
+---
+
+### 12. Contador de vocales y consonantes
+
+Crea un programa que solicite al usuario una cadena de texto y muestre cuántas vocales y cuántas consonantes contiene.
+
+---
+
+### 13. Invertir una cadena
+
+Crea un programa que pida al usuario una cadena de texto y muestre la misma cadena invertida.
+
+* **Ejemplo**: `"python"` → `"nohtyp"`.
+
+---
+
+### 14. Palíndromos
+
+Crea un programa que solicite al usuario una palabra y determine si es un palíndromo (se lee igual al derecho y al revés).
+
+* **Ejemplo**: `"oso"` → palíndromo.
+* **Ejemplo**: `"casa"` → no es palíndromo.
+
+---
+
+### 15. Números pares e impares
+
+Crea un programa que pida al usuario un número entero positivo `n` y muestre todos los números pares e impares entre `1` y `n`.
+
+---
+
+### 16. Suma de dígitos
+
+Crea un programa que pida al usuario un número entero y calcule la suma de todos sus dígitos.
+
+* **Ejemplo**: `327 → 3 + 2 + 7 = 12`.
+
+---
+
+### 17. Calculadora simple
+
+Crea un programa que pida al usuario dos números y una operación (suma, resta, multiplicación o división) y muestre el resultado.
+
+---
+
+### 18. Conversión de temperaturas
+
+Crea un programa que convierta entre grados Celsius, Fahrenheit y Kelvin.
+El usuario introducirá primero la cantidad y la unidad de origen, y después la unidad de destino.
+
+---
+
+### 19. Generador de contraseñas
+
+Crea un programa que genere una contraseña aleatoria de una longitud que indique el usuario.
+La contraseña debe incluir letras mayúsculas, minúsculas, números y símbolos especiales.
+
+---
+
+### 20. Ordenar lista de números
+
+Crea un programa que pida al usuario una lista de números separados por comas y muestre la lista ordenada de menor a mayor.
