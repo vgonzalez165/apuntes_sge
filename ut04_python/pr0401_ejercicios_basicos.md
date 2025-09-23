@@ -40,7 +40,7 @@ Crea un programa que solicite un número al usuario y dibuje un triángulo con a
 
 ### 4. Pirámide de asteriscos
 
-Modifica el programa anterior para que en lugar de crear un triángulo cree una pirámide. Si el usuario introduce un número par se lo volverá a pedir hasta que introduzca un número par.
+Modifica el programa anterior para que en lugar de crear un triángulo cree una pirámide. Si el usuario introduce un número par se lo volverá a pedir hasta que introduzca un número impar.
 
 - **Ejemplo**: si el número introducido es `9` el resultado será:
 
