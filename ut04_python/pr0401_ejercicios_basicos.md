@@ -2,6 +2,8 @@
 
 ## PR0401: Ejercicios básicos en Python
 
+**NOTA**: para considerar la práctica como entregada debe haber por lo menos **10 ejercicios realizados**.
+
 ### 1. Lectura de un número válido
 
 Crea un programa que solicite un número por pantalla al usuario y siga pidiéndolo hasta que el usuario introduzca un número válido.
