@@ -28,15 +28,17 @@ Escribe una función que elimine los caracteres duplicados en una cadena, manten
 
 Escribe un programa que convierta las letras minúsculas de una cadena en mayúsculas y viceversa.
 
-### 7. Invertir palabras de una cadena
+### 7. Rotar caracteres de una cadena
 
-Escribe un programa que invierta el orden de las palabras de una cadena, manteniendo las palabras originales intactas.
+Escribe una función que rote una cadena hacia la izquierda un número dado de veces.
+
+**Ejemplo**: `"abcdef"` rotado 2 veces convierte la cadena en `"cdefab"`.
 
 ### 8. Anagrama
 
 Crea un programa que verifique si dos cadenas son **anagramas**. Se considera que dos palabras son anagramas si tienen las mismas letras en diferente orden, por ejemplo, *lácteo* y *coleta*.
 
-### 9. Frecuencia de caracteres
+### 9. Frecuencia de caracteres (Este no)
 
 Crea una función que reciba una cadena y devuelva un diccionario con la frecuencia de cada carácter.
 
@@ -58,7 +60,7 @@ Por ejemplo, la cadena `aaron` la reemplazaría por `a2r1o1n1`. Por simplicidad,
 
 Crea una función que decodifique una cadena que ha sido comprimida usando el método RLE.
 
-### 14. Formateo de cadenas con plantillas
+### 14. Formateo de cadenas con plantillas (este no)
 
 Escribe un programa que tome una plantilla de cadena y un diccionario, y reemplace los marcadores en la plantilla por los valores correspondientes en el diccionario.
 
@@ -78,8 +80,3 @@ Escribe una función que tome un número de forma de cadena y le agregue separad
 
 **Ejemplo**: `"123456756"` debería convertirse en `"123.456.789"`.
 
-### 18. Rotar caracteres de una cadena
-
-Escribe una función que rote una cadena hacia la izquierda un número dado de veces.
-
-**Ejemplo**: `"abcdef"` rotado 2 veces convierte la cadena en `"cdefab"`.
