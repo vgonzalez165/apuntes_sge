@@ -1,3 +1,12 @@
+<style>
+
+    table {
+        min-witdh: 60%
+    }
+</style>
+
+
+
 # SISTEMAS DE GESTIÓN EMPRESARIAL
 
 <!-- 
