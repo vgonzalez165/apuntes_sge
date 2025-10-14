@@ -19,9 +19,9 @@
 
 ### UT04: El lenguaje de programación Python
 
-- [PR0401: Ejercicios básicos de Python](./ut04_python/pr0401_ejercicios_basicos.md)
-- [PR0402: Ejercicios con cadenas](./ut04_python/pr0402_cadenas.md)
-- [PR0403: Listas en Python](./ut04_python/pr0403_listas.md)
+- [PR0401: Ejercicios básicos de Python](./ut04_python/pr0401_ejercicios_basicos.md) **Entrega**: 25 de octubre de 2025
+- [PR0402: Ejercicios con cadenas](./ut04_python/pr0402_cadenas.md) **Entrega**: 25 de octubre de 2025
+- [PR0403: Listas en Python](./ut04_python/pr0403_listas.md) **Entrega**: 1 de noviembre de 2025
 - [PR0404: Diccionarios]
 - [PR0405: Ejercicios de programación funcional]
 
