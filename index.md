@@ -35,7 +35,7 @@
 | PR0402   | [Uso de cadenas en Python](./ut04_python/pr0402_cadenas.md)                     | **25/10/2025** |
 | PR0403   | [Trabajando con listas en Python](./ut04_python/pr0403_listas.md)               | **01/11/2025** |
 | PR0404   | [Diccionarios en Python](./ut04_python/pr0404_diccionarios.md) | |
-| PR0405   | Programación funcional | |
+| PR0405   | [Programación funcional](./ut04_python/pr0405_programacion_funcional.md) |  |
 
 
 
