@@ -23,6 +23,7 @@
 | Práctica | Enlace | Fecha límite |
 | -------- | ------ | ------------ |
 | PR0200   | [Repositorio para entrega de prácticas](./ut02_instalacion/practicas/pr0200.md) | Sin entrega |
+| PR0201   | [Entorno contenerizado](./ut02_instalacion/practicas/pr0201.md)                 | **16/11/2025** |
 
 ### UT03: Implantación de ERP en la empresa
 
