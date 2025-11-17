@@ -27,6 +27,9 @@
 
 ### UT03: Implantación de ERP en la empresa
 
+| Práctica | Enlace | Fecha límite |
+| -------- | ------ | ------------ |
+| PR03010   | [Módulo facturación](./ut03_implantacion/pr0301.md) | **23/11/2025** |
 
 ### UT04: El lenguaje de programación Python
 
