@@ -29,7 +29,8 @@
 
 | Práctica | Enlace | Fecha límite |
 | -------- | ------ | ------------ |
-| PR03010   | [Módulo facturación](./ut03_implantacion/pr0301.md) | **23/11/2025** |
+| PR0301   | [Módulo facturación](./ut03_implantacion/pr0301.md) | **23/11/2025** |
+| PR0302   | [Integración de servicios externos](./ut03_implantacion/pr0302.md) | **25/11/2025** |
 
 ### UT04: El lenguaje de programación Python
 
