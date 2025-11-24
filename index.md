@@ -40,12 +40,15 @@
 | PR0402   | [Uso de cadenas en Python](./ut04_python/pr0402_cadenas.md)                     | **25/10/2025** |
 | PR0403   | [Trabajando con listas en Python](./ut04_python/pr0403_listas.md)               | **01/11/2025** |
 | PR0404   | [Diccionarios en Python](./ut04_python/pr0404_diccionarios.md)                  | **09/11/2025** |
-| PR0405   | [Programación funcional](./ut04_python/pr0405_programacion_funcional.md)        | **09/11/2025** |
+| PR0405   | [Programación funcional](./ut04_python/pr0405_programacion_funcional.md)        | **02/12/2025** |
 
 
 
 ### UT05: Desarrollo de componentes: primer módulo de Odoo
 
+| Práctica | Enlace | Fecha límite |
+| -------- | ------ | ------------ |
+| PR0501   | [Creación del primer módulo en Odoo](./ut05_creacion_modulos/pr0501_modulo_sencillo.md)      | **25/10/2025** |
 
 ### UT06: Desarrollo de componentes: MVC y herencia
 
