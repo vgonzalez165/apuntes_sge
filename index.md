@@ -48,7 +48,8 @@
 
 | Práctica | Enlace | Fecha límite |
 | -------- | ------ | ------------ |
-| PR0501   | [Creación del primer módulo en Odoo](./ut05_creacion_modulos/pr0501_modulo_sencillo.md)      | **25/10/2025** |
+| PR0501   | [Creación del primer módulo en Odoo](./ut05_creacion_modulos/pr0501_modulo_sencillo.md)      | **30/11/2025** |
+| PR0502   | [Módulo con dos modelos](./ut05_creacion_modulos/pr0502_modulo_dos_modelos.md)   | **03/12/2025** |
 
 ### UT06: Desarrollo de componentes: MVC y herencia
 
