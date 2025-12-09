@@ -1,4 +1,4 @@
-## EV2PR1: Gestión de una biblioteca escolar
+# REP02: Gestión de una biblioteca escolar
 
 El objetivo de esta práctica es diseñar y desarrollar un **módulo personalizado de Odoo** para la gestión interna de una **biblioteca escolar**, incluyendo el registro de libros, autores, préstamos, estudiantes y ejemplares.
 
