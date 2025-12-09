@@ -289,8 +289,15 @@ docker exec -it odoo_web /bin/bash
 Una vez dentro, iniciamos el entorno interactivo de Odoo apuntando a tu base de datos:
 
 ```bash
-odoo-bin shell -d mi_base_datos
+odoo shell -d odoo --db_host=postgres -r odoo -w paso
 ```
+
+Donde:
+
+- `-d`: nombre de la base de datos
+- `--db_host`: host (o contenedor) donde está la base de datos
+- `-r`: nombre de usuario
+- `-w`: contraseña
 
 *Si el comando `odoo-bin` no se encuentra, prueba simplemente con `odoo shell -d mi_base_datos`.*
 
@@ -303,6 +310,8 @@ Dentro del shell, tienes acceso a la variable `env` (el entorno de Odoo). Escrib
 1.  Busca tu módulo:
 
     ```python
+    env['ir.module.module'].update_list()
+    env.cr.commit()
     modulo = env['ir.module.module'].search([('name', '=', 'mi_modulo_estudiante')])
     ```
 
@@ -326,7 +335,6 @@ Dentro del shell, tienes acceso a la variable `env` (el entorno de Odoo). Escrib
     exit()
     ```
 
------
 
 ## Parte 4: Comprobación en PostgreSQL
 
@@ -371,10 +379,10 @@ El lector de pantalla leerá una lista con tres columnas principales:
 
 Observarás que Odoo añade automáticamente campos "mágicos" que tú no escribiste, como:
 
-  * `id` (Clave primaria).
-  * `create_uid` (Quién lo creó).
-  * `create_date` (Cuándo se creó).
-  * `write_date` (Última modificación).
+  - `id` (Clave primaria).
+  - `create_uid` (Quién lo creó).
+  - `create_date` (Cuándo se creó).
+  - `write_date` (Última modificación).
 
 ### Paso 4: Realizar una consulta de prueba
 

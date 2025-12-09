@@ -1,6 +1,6 @@
 # UT06: Desarrollo de componentes: MVC y herencia
 
-## PR0601: Campos del modelo
+## PR0602: Campos del modelo
 
 ### ¿Qué vamos a aprender?
 

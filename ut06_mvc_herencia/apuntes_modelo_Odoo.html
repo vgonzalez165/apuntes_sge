@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Gu&iacute;a de Desarrollo Backend en Odoo&colon; Modelos y Base de Datos</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="guía-de-desarrollo-backend-en-odoo-modelos-y-base-de-datos">Guía de Desarrollo Backend en Odoo: Modelos y Base de Datos</h1>
+<p>Para estos apuntes, asumiremos los siguientes nombres (puedes cambiarlos según tu configuración real):</p>
+<ul>
+<li>Nombre del contenedor Odoo: <code>odoo_web</code></li>
+<li>Nombre del contenedor Postgres: <code>db</code></li>
+<li>Nombre de la base de datos: <code>mi_base_datos</code></li>
+<li>Nombre de tu módulo: <code>mi_modulo_estudiante</code></li>
+</ul>
+<h2 id="parte-1-estructura-del-módulo">Parte 1: Estructura del Módulo</h2>
+<p>Antes de crear el modelo, tu módulo debe tener una estructura de carpetas mínima.</p>
+<ol>
+<li>Carpeta raíz con el nombre del módulo (<code>mi_modulo_estudiante</code>).</li>
+<li>Archivo <code>__init__.py</code>: Indica a Python que esto es un paquete.</li>
+<li>Archivo <code>__manifest__.py</code>: Describe el módulo a Odoo.</li>
+<li>Carpeta <code>models</code>: Aquí guardaremos nuestros archivos de código.</li>
+<li>Archivo <code>models/__init__.py</code>: Importa los archivos <code>.py</code> que estén dentro de la carpeta <code>models</code>.</li>
+<li>Archivo <code>models/mi_modelo.py</code>: El archivo donde escribiremos el código del modelo.</li>
+</ol>
+<h2 id="parte-2-creación-de-un-modelo-en-odoo">Parte 2: Creación de un Modelo en Odoo</h2>
+<p>Un &quot;Modelo&quot; en Odoo es una clase de Python que se traduce automáticamente en una tabla de la base de datos.</p>
+<p>Abre tu archivo <code>models/mi_modelo.py</code> y sigue esta estructura.</p>
+<h3 id="1-importaciones-y-definición-de-clase">1. Importaciones y Definición de Clase</h3>
+<p>Todo modelo debe heredar de <code>models.Model</code>.</p>
+<pre><code class="language-python"><span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+<span class="hljs-keyword">from</span> odoo <span class="hljs-keyword">import</span> models, fields
+
+<span class="hljs-keyword">class</span> <span class="hljs-title class_">EstudianteCurso</span>(models.Model):
+    <span class="hljs-comment"># Atributos obligatorios</span>
+    _name = <span class="hljs-string">&#x27;estudiante.curso&#x27;</span> <span class="hljs-comment"># Nombre técnico del modelo (será el nombre de la tabla)</span>
+    _description = <span class="hljs-string">&#x27;Información de los estudiantes&#x27;</span> <span class="hljs-comment"># Nombre legible para humanos</span>
+</code></pre>
+<blockquote>
+<p><strong>Nota sobre <code>_name</code>:</strong> Odoo utiliza puntos para separar palabras en el nombre del modelo (ej. <code>estudiante.curso</code>). Sin embargo, en la base de datos PostgreSQL, estos puntos se convertirán en guiones bajos (<code>estudiante_curso</code>).</p>
+</blockquote>
+<h3 id="2-tipos-de-datos-básicos">2. Tipos de Datos Básicos</h3>
+<p>En Odoo, todos los campos son clases que se importan desde <code>odoo.fields</code>.</p>
+<h2 id="1-parámetros-globales-comunes-a-todos-los-campos">1. Parámetros Globales (Comunes a todos los campos)</h2>
+<p>Estos parámetros se pueden utilizar en prácticamente cualquier tipo de dato (<code>Char</code>, <code>Integer</code>, <code>Many2one</code>, etc.).</p>
+<ul>
+<li><strong><code>string</code></strong> (str): Es la etiqueta del campo. Es el texto que leerá tu lector de pantalla en la interfaz.
+<ul>
+<li><em>Ejemplo:</em> <code>string='Fecha de nacimiento'</code></li>
+</ul>
+</li>
+<li><strong><code>required</code></strong> (bool): Si es <code>True</code>, el usuario no podrá guardar el registro si el campo está vacío. A nivel de base de datos, establece la columna como <code>NOT NULL</code>.
+<ul>
+<li><em>Default:</em> <code>False</code></li>
+</ul>
+</li>
+<li><strong><code>help</code></strong> (str): Texto de ayuda. En la interfaz web, aparece cuando el ratón pasa por encima. Para ti, es información contextual valiosa que describe para qué sirve el campo.</li>
+<li><strong><code>readonly</code></strong> (bool): Si es <code>True</code>, el campo se muestra pero no se puede editar.</li>
+<li><strong><code>index</code></strong> (bool): Si es <code>True</code>, crea un índice en la base de datos Postgres. Úsalo si vas a realizar muchas búsquedas filtrando por este campo.</li>
+<li><strong><code>default</code></strong>: Valor por defecto al crear un nuevo registro. Puede ser un valor estático (como un número) o una función.</li>
+<li><strong><code>store</code></strong> (bool): Por defecto es <code>True</code>. Si lo pones en <code>False</code>, el campo no se guarda en la base de datos (se usa para cálculos al vuelo).</li>
+</ul>
+<h2 id="2-tipos-de-datos-simples">2. Tipos de Datos Simples</h2>
+<h3 id="a-texto">A. Texto</h3>
+<p>Odoo distingue entre textos cortos (nombres, códigos) y largos (descripciones).</p>
+<h4 id="fieldschar"><code>fields.Char</code></h4>
+<p>Guarda cadenas de texto de longitud limitada. En Postgres es un <code>VARCHAR</code>.</p>
+<ul>
+<li><strong><code>size</code></strong> (int): (Opcional) Número máximo de caracteres permitidos.</li>
+<li><strong><code>trim</code></strong> (bool): Por defecto <code>True</code>. Elimina espacios en blanco al inicio y al final automáticamente.</li>
+</ul>
+<!-- end list -->
+<pre><code class="language-python">codigo_postal = fields.Char(string=<span class="hljs-string">&#x27;Código Postal&#x27;</span>, size=<span class="hljs-number">5</span>, required=<span class="hljs-literal">True</span>)
+</code></pre>
+<h4 id="fieldstext"><code>fields.Text</code></h4>
+<p>Guarda textos largos sin límite predefinido. En Postgres es un <code>TEXT</code>. Se usa para notas, observaciones o biografías. No tiene parámetros especiales aparte de los globales.</p>
+<h4 id="fieldshtml"><code>fields.Html</code></h4>
+<p>Similar a <code>Text</code>, pero permite guardar etiquetas HTML. El navegador de Odoo renderizará el formato (negritas, listas, etc.).</p>
+<ul>
+<li><strong><code>sanitize</code></strong> (bool): Por defecto <code>True</code>. Limpia código malicioso (scripts) por seguridad.</li>
+</ul>
+<hr>
+<h3 id="b-números">B. Números</h3>
+<h4 id="fieldsinteger"><code>fields.Integer</code></h4>
+<p>Guarda números enteros (sin decimales).</p>
+<ul>
+<li>No tiene parámetros específicos extra, más allá de los globales.</li>
+</ul>
+<!-- end list -->
+<pre><code class="language-python">edad = fields.Integer(string=<span class="hljs-string">&#x27;Edad&#x27;</span>, default=<span class="hljs-number">18</span>)
+</code></pre>
+<h4 id="fieldsfloat"><code>fields.Float</code></h4>
+<p>Guarda números con decimales.</p>
+<ul>
+<li><strong><code>digits</code></strong> (tuple): Es una tupla <code>(total_precision, decimales)</code>. Define cuántos dígitos se guardan en total y cuántos son decimales.
+<ul>
+<li><em>Ejemplo:</em> <code>digits=(10, 2)</code> significa hasta 10 números en total, de los cuales 2 son decimales.</li>
+</ul>
+</li>
+</ul>
+<!-- end list -->
+<pre><code class="language-python">peso = fields.Float(string=<span class="hljs-string">&#x27;Peso en kg&#x27;</span>, digits=(<span class="hljs-number">5</span>, <span class="hljs-number">2</span>))
+</code></pre>
+<h4 id="fieldsmonetary"><code>fields.Monetary</code></h4>
+<p>Es un tipo especial de <code>Float</code> diseñado para dinero.</p>
+<ul>
+<li><strong><code>currency_field</code></strong> (str): Indica el nombre del campo que contiene la moneda (por defecto busca un campo llamado <code>currency_id</code>). Es obligatorio tener un campo Many2one a <code>res.currency</code> en el mismo modelo para usar esto.</li>
+</ul>
+<hr>
+<h3 id="c-lógicos-y-fechas">C. Lógicos y Fechas</h3>
+<h4 id="fieldsboolean"><code>fields.Boolean</code></h4>
+<p>Guarda <code>True</code> o <code>False</code>. En la interfaz se ve como una casilla de verificación (checkbox).</p>
+<pre><code class="language-python">es_alumno = fields.Boolean(string=<span class="hljs-string">&#x27;¿Es alumno?&#x27;</span>, default=<span class="hljs-literal">True</span>)
+</code></pre>
+<h4 id="fieldsdate"><code>fields.Date</code></h4>
+<p>Guarda una fecha (Año-Mes-Día).</p>
+<ul>
+<li>Para poner la fecha de hoy por defecto, usa <code>default=fields.Date.context_today</code>.</li>
+</ul>
+<h4 id="fieldsdatetime"><code>fields.Datetime</code></h4>
+<p>Guarda fecha y hora.</p>
+<ul>
+<li>Para poner el momento actual (&quot;ahora&quot;) por defecto, usa <code>default=fields.Datetime.now</code>.</li>
+</ul>
+<hr>
+<h3 id="d-selección-y-archivos">D. Selección y Archivos</h3>
+<h4 id="fieldsselection"><code>fields.Selection</code></h4>
+<p>Crea una lista cerrada de opciones (un menú desplegable).
+Es obligatorio definir el primer parámetro, que es una <strong>lista de tuplas</strong>.
+Cada tupla tiene dos elementos: <code>('valor_interno', 'Etiqueta a mostrar')</code>.</p>
+<ul>
+<li>El <em>valor_interno</em> es lo que se guarda en Postgres.</li>
+<li>La <em>Etiqueta</em> es lo que lee el usuario.</li>
+</ul>
+<!-- end list -->
+<pre><code class="language-python">estado = fields.Selection([
+    (<span class="hljs-string">&#x27;borrador&#x27;</span>, <span class="hljs-string">&#x27;Borrador&#x27;</span>),
+    (<span class="hljs-string">&#x27;confirmado&#x27;</span>, <span class="hljs-string">&#x27;Confirmado&#x27;</span>),
+    (<span class="hljs-string">&#x27;cancelado&#x27;</span>, <span class="hljs-string">&#x27;Cancelado&#x27;</span>)
+], string=<span class="hljs-string">&#x27;Estado del documento&#x27;</span>, default=<span class="hljs-string">&#x27;borrador&#x27;</span>)
+</code></pre>
+<h4 id="fieldsbinary"><code>fields.Binary</code></h4>
+<p>Se usa para subir archivos o imágenes. Guarda el archivo codificado en Base64.</p>
+<ul>
+<li><strong><code>attachment</code></strong> (bool): Por defecto <code>True</code>. Indica si el archivo se guarda como adjunto en Odoo (mejor rendimiento) o dentro de la columna de la tabla.</li>
+</ul>
+<hr>
+<h2 id="3-tipos-de-datos-relacionales-detallado">3. Tipos de Datos Relacionales (Detallado)</h2>
+<p>Estos campos son punteros a otras tablas.</p>
+<h3 id="a-fieldsmany2one-muchos-a-uno">A. <code>fields.Many2one</code> (Muchos a Uno)</h3>
+<p>Crea una clave foránea en Postgres.</p>
+<ul>
+<li><strong><code>comodel_name</code></strong> (str): (Obligatorio, primer argumento posicional). El nombre del modelo destino (ej. <code>'res.partner'</code>).</li>
+<li><strong><code>ondelete</code></strong> (str): Define qué pasa si se borra el registro al que apuntamos.
+<ul>
+<li><code>'set null'</code>: (Default) Si borras la escuela, el campo escuela del alumno se queda vacío.</li>
+<li><code>'cascade'</code>: Si borras la escuela, se borran también todos los alumnos.</li>
+<li><code>'restrict'</code>: No te deja borrar la escuela si tiene alumnos.</li>
+</ul>
+</li>
+</ul>
+<!-- end list -->
+<pre><code class="language-python"><span class="hljs-comment"># Ejemplo: Un libro tiene un autor</span>
+autor_id = fields.Many2one(
+    comodel_name=<span class="hljs-string">&#x27;res.partner&#x27;</span>,
+    string=<span class="hljs-string">&#x27;Autor&#x27;</span>,
+    ondelete=<span class="hljs-string">&#x27;restrict&#x27;</span>
+)
+</code></pre>
+<h3 id="b-fieldsone2many-uno-a-muchos">B. <code>fields.One2many</code> (Uno a Muchos)</h3>
+<p>Es una lista virtual. No crea una columna en la tabla actual en Postgres, sino que hace una consulta inversa a la otra tabla.</p>
+<ul>
+<li><strong><code>comodel_name</code></strong> (str): El modelo destino.</li>
+<li><strong><code>inverse_name</code></strong> (str): El nombre del campo <code>Many2one</code> en el otro modelo que apunta hacia aquí.</li>
+<li><strong><code>domain</code></strong> (list): (Opcional) Un filtro para mostrar solo ciertos registros.</li>
+</ul>
+<!-- end list -->
+<pre><code class="language-python"><span class="hljs-comment"># Ejemplo: Un autor tiene muchos libros</span>
+<span class="hljs-comment"># En el modelo de libros debe existir un campo &#x27;autor_id&#x27;</span>
+libro_ids = fields.One2many(
+    comodel_name=<span class="hljs-string">&#x27;biblioteca.libro&#x27;</span>,
+    inverse_name=<span class="hljs-string">&#x27;autor_id&#x27;</span>,
+    string=<span class="hljs-string">&#x27;Libros escritos&#x27;</span>
+)
+</code></pre>
+<h3 id="c-fieldsmany2many-muchos-a-muchos">C. <code>fields.Many2many</code> (Muchos a Muchos)</h3>
+<p>Crea una tabla intermedia automáticamente en Postgres.</p>
+<ul>
+<li><strong><code>comodel_name</code></strong> (str): El modelo destino.</li>
+<li><strong><code>relation</code></strong> (str): (Opcional) Nombre de la tabla intermedia en Postgres. Si no lo pones, Odoo genera uno automáticamente.</li>
+<li><strong><code>column1</code></strong> y <strong><code>column2</code></strong> (str): (Opcional) Nombres de las columnas en la tabla intermedia. Útil si relacionas un modelo consigo mismo.</li>
+</ul>
+<!-- end list -->
+<pre><code class="language-python"><span class="hljs-comment"># Ejemplo: Un libro tiene muchas etiquetas (tags)</span>
+etiqueta_ids = fields.Many2many(
+    comodel_name=<span class="hljs-string">&#x27;biblioteca.etiqueta&#x27;</span>,
+    string=<span class="hljs-string">&#x27;Etiquetas&#x27;</span>
+)
+</code></pre>
+<hr>
+<h2 id="4-campos-calculados-computed-fields">4. Campos Calculados (Computed Fields)</h2>
+<p>Cualquier tipo de dato anterior puede convertirse en calculado si le añades el parámetro <code>compute</code>.</p>
+<ul>
+<li><strong><code>compute</code></strong> (str): Nombre del método (función) que calculará el valor.</li>
+<li><strong><code>store</code></strong> (bool):
+<ul>
+<li><code>False</code> (Default): Se calcula cada vez que se lee (no se guarda en DB, no se puede buscar por él).</li>
+<li><code>True</code>: Se calcula y se guarda en DB. Se recalcula solo cuando cambian las dependencias.</li>
+</ul>
+</li>
+</ul>
+<!-- end list -->
+<pre><code class="language-python"><span class="hljs-comment"># Definición del campo</span>
+importe_total = fields.Float(string=<span class="hljs-string">&#x27;Total&#x27;</span>, compute=<span class="hljs-string">&#x27;_calcular_total&#x27;</span>, store=<span class="hljs-literal">True</span>)
+
+<span class="hljs-comment"># Definición de la función (se explicará en detalle en otra lección)</span>
+<span class="hljs-meta">@api.depends(<span class="hljs-params"><span class="hljs-string">&#x27;precio&#x27;</span>, <span class="hljs-string">&#x27;cantidad&#x27;</span></span>)</span>
+<span class="hljs-keyword">def</span> <span class="hljs-title function_">_calcular_total</span>(<span class="hljs-params">self</span>):
+    <span class="hljs-keyword">for</span> record <span class="hljs-keyword">in</span> self:
+        record.importe_total = record.precio * record.cantidad
+</code></pre>
+<h2 id="parte-3-instalación-desde-odoo-shell">Parte 3: Instalación desde Odoo Shell</h2>
+<p>Como eres un usuario experto en teclado, utilizaremos la consola interactiva de Odoo (<code>shell</code>) para instalar el módulo sin usar el navegador.</p>
+<h3 id="paso-1-acceder-al-contenedor-de-odoo">Paso 1: Acceder al contenedor de Odoo</h3>
+<p>Abre tu terminal y ejecuta el siguiente comando para entrar al contenedor:</p>
+<pre><code class="language-bash">docker <span class="hljs-built_in">exec</span> -it odoo_web /bin/bash
+</code></pre>
+<h3 id="paso-2-iniciar-odoo-shell">Paso 2: Iniciar Odoo Shell</h3>
+<p>Una vez dentro, iniciamos el entorno interactivo de Odoo apuntando a tu base de datos:</p>
+<pre><code class="language-bash">odoo shell -d odoo --db_host=postgres -r odoo -w paso
+</code></pre>
+<p>Donde:</p>
+<ul>
+<li><code>-d</code>: nombre de la base de datos</li>
+<li><code>--db_host</code>: host (o contenedor) donde está la base de datos</li>
+<li><code>-r</code>: nombre de usuario</li>
+<li><code>-w</code>: contraseña</li>
+</ul>
+<p><em>Si el comando <code>odoo-bin</code> no se encuentra, prueba simplemente con <code>odoo shell -d mi_base_datos</code>.</em></p>
+<p>Esperarás unos segundos hasta que veas el prompt de Python <code>&gt;&gt;&gt;</code>.</p>
+<h3 id="paso-3-instalar-el-módulo-mediante-código-python">Paso 3: Instalar el módulo mediante código Python</h3>
+<p>Dentro del shell, tienes acceso a la variable <code>env</code> (el entorno de Odoo). Escribe lo siguiente línea por línea:</p>
+<ol>
+<li>
+<p>Busca tu módulo:</p>
+<pre><code class="language-python">env[<span class="hljs-string">&#x27;ir.module.module&#x27;</span>].update_list()
+env.cr.commit()
+modulo = env[<span class="hljs-string">&#x27;ir.module.module&#x27;</span>].search([(<span class="hljs-string">&#x27;name&#x27;</span>, <span class="hljs-string">&#x27;=&#x27;</span>, <span class="hljs-string">&#x27;mi_modulo_estudiante&#x27;</span>)])
+</code></pre>
+</li>
+<li>
+<p>Verifica que lo encontró (debe devolver algo como <code>ir.module.module(ID,)</code>):</p>
+<pre><code class="language-python"><span class="hljs-built_in">print</span>(modulo)
+</code></pre>
+</li>
+<li>
+<p>Instálalo:</p>
+<pre><code class="language-python">modulo.button_immediate_install()
+</code></pre>
+<p><em>Nota: Esto iniciará un proceso de carga. Si no hay errores, volverás al prompt.</em></p>
+</li>
+<li>
+<p>Sal del shell:</p>
+<pre><code class="language-python">exit()
+</code></pre>
+</li>
+</ol>
+<h2 id="parte-4-comprobación-en-postgresql">Parte 4: Comprobación en PostgreSQL</h2>
+<p>Ahora verificaremos que Odoo ha creado realmente la tabla en la base de datos.</p>
+<h3 id="paso-1-acceder-al-contenedor-de-base-de-datos">Paso 1: Acceder al contenedor de Base de Datos</h3>
+<p>Desde tu terminal principal (fuera del contenedor de Odoo), accede al contenedor de Postgres:</p>
+<pre><code class="language-bash">docker <span class="hljs-built_in">exec</span> -it db psql -U odoo -d mi_base_datos
+</code></pre>
+<ul>
+<li><code>-U odoo</code>: Indica el usuario (comúnmente es 'odoo').</li>
+<li><code>-d mi_base_datos</code>: Indica la base de datos a conectar.</li>
+</ul>
+<p>Deberías ver un prompt que termina en <code>mi_base_datos=#</code>.</p>
+<h3 id="paso-2-listar-las-tablas">Paso 2: Listar las tablas</h3>
+<p>El comando para listar tablas en psql es <code>\dt</code>. Sin embargo, hay muchas. Vamos a filtrar buscando tu tabla. Recuerda que el punto se convierte en guion bajo.</p>
+<pre><code class="language-sql">\dt <span class="hljs-operator">*</span>estudiante<span class="hljs-operator">*</span>
+</code></pre>
+<p>Deberías ver una salida tabular que lista <code>public | estudiante_curso | table | odoo</code>. Esto confirma que la tabla existe.</p>
+<h3 id="paso-3-inspeccionar-la-estructura">Paso 3: Inspeccionar la estructura</h3>
+<p>Para ver si tus campos (columnas) se crearon con los tipos correctos, usa el comando <code>\d</code> seguido del nombre de la tabla:</p>
+<pre><code class="language-sql">\d estudiante_curso
+</code></pre>
+<p>El lector de pantalla leerá una lista con tres columnas principales:</p>
+<ol>
+<li><strong>Column:</strong> Nombre del campo (ej. <code>name</code>, <code>edad</code>, <code>escuela_id</code>).</li>
+<li><strong>Type:</strong> Tipo de dato SQL (ej. <code>integer</code>, <code>character varying</code>, <code>boolean</code>).</li>
+<li><strong>Collation/Nullable/Default:</strong> Restricciones.</li>
+</ol>
+<p>Observarás que Odoo añade automáticamente campos &quot;mágicos&quot; que tú no escribiste, como:</p>
+<ul>
+<li><code>id</code> (Clave primaria).</li>
+<li><code>create_uid</code> (Quién lo creó).</li>
+<li><code>create_date</code> (Cuándo se creó).</li>
+<li><code>write_date</code> (Última modificación).</li>
+</ul>
+<h3 id="paso-4-realizar-una-consulta-de-prueba">Paso 4: Realizar una consulta de prueba</h3>
+<p>Si quieres ver los datos (estará vacía por ahora), usa SQL estándar:</p>
+<pre><code class="language-sql"><span class="hljs-keyword">SELECT</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">FROM</span> estudiante_curso;
+</code></pre>
+<p>Para salir de la consola de Postgres, escribe:</p>
+<pre><code class="language-sql">\q
+</code></pre>
+
+            
+            
+        </body>
+        </html>
