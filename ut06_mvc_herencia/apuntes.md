@@ -4,10 +4,10 @@
 
 Para estos apuntes, asumiremos los siguientes nombres (puedes cambiarlos según tu configuración real):
 
-  * Nombre del contenedor Odoo: `odoo_web`
-  * Nombre del contenedor Postgres: `db`
-  * Nombre de la base de datos: `mi_base_datos`
-  * Nombre de tu módulo: `mi_modulo_estudiante`
+  - Nombre del contenedor Odoo: `odoo_web`
+  - Nombre del contenedor Postgres: `db`
+  - Nombre de la base de datos: `mi_base_datos`
+  - Nombre de tu módulo: `mi_modulo_estudiante`
 
 
 ## Parte 1: Estructura del Módulo
@@ -43,7 +43,7 @@ class EstudianteCurso(models.Model):
     _description = 'Información de los estudiantes' # Nombre legible para humanos
 ```
 
-> **Nota sobre `_name`:** Odoo utiliza puntos para separar palabras en el nombre del modelo (ej. `estudiante.curso`). Sin embargo, en la base de datos PostgreSQL, estos puntos se convertirán en guiones bajos (`estudiante_curso`).
+**Nota sobre `_name`:** Odoo utiliza puntos para separar palabras en el nombre del modelo (ej. `estudiante.curso`). Sin embargo, en la base de datos PostgreSQL, estos puntos se convertirán en guiones bajos (`estudiante_curso`).
 
 ### 2\. Tipos de Datos Básicos
 
@@ -182,7 +182,7 @@ Se usa para subir archivos o imágenes. Guarda el archivo codificado en Base64.
 
 -----
 
-## 3\. Tipos de Datos Relacionales (Detallado)
+## 3\. Tipos de Datos Relacionales
 
 Estos campos son punteros a otras tablas.
 
@@ -190,13 +190,13 @@ Estos campos son punteros a otras tablas.
 
 Crea una clave foránea en Postgres.
 
-  * **`comodel_name`** (str): (Obligatorio, primer argumento posicional). El nombre del modelo destino (ej. `'res.partner'`).
-  * **`ondelete`** (str): Define qué pasa si se borra el registro al que apuntamos.
-      * `'set null'`: (Default) Si borras la escuela, el campo escuela del alumno se queda vacío.
-      * `'cascade'`: Si borras la escuela, se borran también todos los alumnos.
-      * `'restrict'`: No te deja borrar la escuela si tiene alumnos.
+  - **`comodel_name`** (str): (Obligatorio, primer argumento posicional). El nombre del modelo destino (ej. `'res.partner'`).
+  - **`ondelete`** (str): Define qué pasa si se borra el registro al que apuntamos.
+      - `'set null'`: (Default) Si borras la escuela, el campo escuela del alumno se queda vacío.
+      - `'cascade'`: Si borras la escuela, se borran también todos los alumnos.
+      - `'restrict'`: No te deja borrar la escuela si tiene alumnos.
 
-<!-- end list -->
+
 
 ```python
 # Ejemplo: Un libro tiene un autor
@@ -211,11 +211,10 @@ autor_id = fields.Many2one(
 
 Es una lista virtual. No crea una columna en la tabla actual en Postgres, sino que hace una consulta inversa a la otra tabla.
 
-  * **`comodel_name`** (str): El modelo destino.
-  * **`inverse_name`** (str): El nombre del campo `Many2one` en el otro modelo que apunta hacia aquí.
-  * **`domain`** (list): (Opcional) Un filtro para mostrar solo ciertos registros.
+  - **`comodel_name`** (str): El modelo destino.
+  - **`inverse_name`** (str): El nombre del campo `Many2one` en el otro modelo que apunta hacia aquí.
+  - **`domain`** (list): (Opcional) Un filtro para mostrar solo ciertos registros.
 
-<!-- end list -->
 
 ```python
 # Ejemplo: Un autor tiene muchos libros
@@ -231,11 +230,11 @@ libro_ids = fields.One2many(
 
 Crea una tabla intermedia automáticamente en Postgres.
 
-  * **`comodel_name`** (str): El modelo destino.
-  * **`relation`** (str): (Opcional) Nombre de la tabla intermedia en Postgres. Si no lo pones, Odoo genera uno automáticamente.
-  * **`column1`** y **`column2`** (str): (Opcional) Nombres de las columnas en la tabla intermedia. Útil si relacionas un modelo consigo mismo.
+  - **`comodel_name`** (str): El modelo destino.
+  - **`relation`** (str): (Opcional) Nombre de la tabla intermedia en Postgres. Si no lo pones, Odoo genera uno automáticamente.
+  - **`column1`** y **`column2`** (str): (Opcional) Nombres de las columnas en la tabla intermedia. Útil si relacionas un modelo consigo mismo.
 
-<!-- end list -->
+
 
 ```python
 # Ejemplo: Un libro tiene muchas etiquetas (tags)
@@ -245,24 +244,22 @@ etiqueta_ids = fields.Many2many(
 )
 ```
 
------
 
 ## 4\. Campos Calculados (Computed Fields)
 
 Cualquier tipo de dato anterior puede convertirse en calculado si le añades el parámetro `compute`.
 
-  * **`compute`** (str): Nombre del método (función) que calculará el valor.
-  * **`store`** (bool):
-      * `False` (Default): Se calcula cada vez que se lee (no se guarda en DB, no se puede buscar por él).
-      * `True`: Se calcula y se guarda en DB. Se recalcula solo cuando cambian las dependencias.
+  - **`compute`** (str): Nombre del método (función) que calculará el valor.
+  - **`store`** (bool):
+      - `False` (Default): Se calcula cada vez que se lee (no se guarda en DB, no se puede buscar por él).
+      - `True`: Se calcula y se guarda en DB. Se recalcula solo cuando cambian las dependencias.
 
-<!-- end list -->
 
 ```python
 # Definición del campo
 importe_total = fields.Float(string='Total', compute='_calcular_total', store=True)
 
-# Definición de la función (se explicará en detalle en otra lección)
+# Definición de la función
 @api.depends('precio', 'cantidad')
 def _calcular_total(self):
     for record in self:
@@ -271,14 +268,13 @@ def _calcular_total(self):
 
 
 
-
 ## Parte 3: Instalación desde Odoo Shell
 
-Como eres un usuario experto en teclado, utilizaremos la consola interactiva de Odoo (`shell`) para instalar el módulo sin usar el navegador.
+Para activar el módulo y comprobar que está correctamente instalado, usaremos la consola interactiva de Odoo (`shell`) para instalar el módulo sin usar el navegador.
 
 ### Paso 1: Acceder al contenedor de Odoo
 
-Abre tu terminal y ejecuta el siguiente comando para entrar al contenedor:
+Abre tu terminal y ejecuta el siguiente comando para entrar al contenedor de Odoo:
 
 ```bash
 docker exec -it odoo_web /bin/bash
@@ -298,8 +294,6 @@ Donde:
 - `--db_host`: host (o contenedor) donde está la base de datos
 - `-r`: nombre de usuario
 - `-w`: contraseña
-
-*Si el comando `odoo-bin` no se encuentra, prueba simplemente con `odoo shell -d mi_base_datos`.*
 
 Esperarás unos segundos hasta que veas el prompt de Python `>>>`.
 

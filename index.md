@@ -36,9 +36,9 @@
 | `PR0501`   | [Creación del primer módulo en Odoo](./ut05_creacion_modulos/pr0501_modulo_sencillo.md) | **30/11/2025** | `RA5`     |
 | `PR0502`   | [Módulo con dos modelos](./ut05_creacion_modulos/pr0502_modulo_dos_modelos.md)          | **03/12/2025** | `RA5`     |
 | **UT06** | **Desarrollo de componentes: MVC y herencia**                                                              |
-| `PR0601`   | [PR0601: Campos del modelo](./ut06_mvc_herencia/pr0601_campos_modelo.md)                |                | `RA5`     |
-| `PR0602`   | [PR0602: Campos relacionales](./ut06_mvc_herencia/pr0602_campos_relacionales.md)        |                | `RA5`     |
-| `PR0603`   | [PR0603: Campos calculados y restricciones](./ut06_mvc_herencia/pr0603_calc_restric.md) |                | `RA5`     |
+| `PR0601`   | [PR0601: Campos del modelo](./ut06_mvc_herencia/pr0601_campos_modelo.md)                | **20/12/2025** | `RA5`     |
+| `PR0602`   | [PR0602: Campos relacionales](./ut06_mvc_herencia/pr0602_campos_relacionales.md)        | **20/12/2025** | `RA5`     |
+| `PR0603`   | [PR0603: Campos calculados y restricciones](./ut06_mvc_herencia/pr0603_calc_restric.md) | **20/12/2025** | `RA5`     |
 | `PR0604`   | [PR0604: Vistas de tipo lista](./ut06_mvc_herencia/pr0604_vista_tree.md)                |                | `RA5`     |
 | `PR0605`   | [PR0605: Vistas de tipo formulario](./ut06_mvc_herencia/pr0605_vista_form.md)           |                | `RA5`     |
 | **UT07** | **Web Controllers y cliente web**                                                                          |
