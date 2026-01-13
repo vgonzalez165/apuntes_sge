@@ -1,4 +1,4 @@
-# REP01: Gestión de un taller mecánico
+# PR0606: Gestión de un taller mecánico 
 
 El objetivo de esta práctica es diseñar y desarrollar un **módulo personalizado de Odoo** para la gestión interna de un pequeño **taller mecánico**, incluyendo el registro de clientes, vehículos, reparaciones, piezas utilizadas y técnicos.
 
