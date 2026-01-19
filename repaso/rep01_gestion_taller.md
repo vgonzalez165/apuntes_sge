@@ -49,9 +49,7 @@ Tu módulo deberá tener los siguientes modelos:
 
 ## Interfaz de usuario (vistas)
 
-El módulo debe incluir una **interfaz gráfica completa** para cada uno de los modelos definidos, definiendo una vista de tipo árbol y otra de tipo formulario para cada uno de los modelos.
-
-La vista debe incluir por lo menos las siguientes características:
+El módulo debe incluir una **interfaz gráfica completa** para cada uno de los modelos definidos.La vista debe incluir por lo menos las siguientes características:
 
 - Todas las vistas deben incluir todos los datos del modelo correspondiente.
 - Modelo `pieza`
@@ -73,7 +71,7 @@ La vista debe incluir por lo menos las siguientes características:
   - Si el estado es *"finalizada"*, todos los campos quedan deshabilitados (`readonly`), excepto el botón de reabrir
   
 
-## API REST
+## API REST (**Esto no**)
 
 Debes exponer una API REST básica con rutas que permitan consultar información del taller desde aplicaciones externas.
 
