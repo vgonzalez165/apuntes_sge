@@ -40,7 +40,7 @@
 | `PR0602`   | [PR0602: Campos relacionales](./ut06_mvc_herencia/pr0602_campos_relacionales.md)        | **20/12/2025** | `RA5`     |
 | `PR0603`   | [PR0603: Campos calculados y restricciones](./ut06_mvc_herencia/pr0603_calc_restric.md) | **20/12/2025** | `RA5`     |
 | `PR0604`   | [PR0604: Vistas de tipo lista](./ut06_mvc_herencia/pr0604_vista_tree.md)                | **16/01/2021** | `RA5`     |
-| `PR0606`   | [PR0606: Gestión de un taller mecánico](./repaso/rep01_gestion_taller.md)               | **21/01/2026** | `RA5`     |
+| `PR0606`   | [PR0606: Gestión de un taller mecánico](./repaso/rep01_gestion_taller.md)               | **28/01/2026** | `RA5`     |
 | **UT07** | **Web Controllers y cliente web**                                                                          |
 | `PR0701`   | [PR0701: Página estática y dinámica](./ut07_web_controllers/pr0701_estatica_dinamica.md)|                | `RA5`     |
 | `PR0702`   | [PR0702: API REST](./ut07_web_controllers/pr0702_api_rest.md)                           |                | `RA5`     |
