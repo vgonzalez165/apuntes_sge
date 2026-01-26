@@ -12,7 +12,7 @@ En esta práctica te familiarizarás con los fundamentos básicos de Web Control
 
 ### ¿Qué hay que hacer?
 
-Modifica el módulo de suscripciones de la práctica anterior para que tenga:
+Modifica el módulo de taller de la práctica PR0606 para que tenga:
 
 - Una página estática con un mensaje de bienvenida
 - Una página dinámica que muestre un listado de suscripciones con dos o tres campos de tu elección
