@@ -1,97 +1,126 @@
-# Proyecto Final: Sistema de Gestión de Inventario IT
+# PROYECTO FINAL: Sistemas de Gestión Empresarial
+
+## 1. Contexto del Negocio
+
+El cliente, **TechSchool Solutions**, es un centro de formación tecnológica de alto rendimiento. Gestionan un inventario costoso de hardware (laptops de gama alta, kits de robótica, cámaras, servidores) que prestan rotativamente a estudiantes y profesores.
+
+Actualmente, carecen de control sobre el ciclo de vida de los activos. Desconocen qué equipos están dañados, cuánto gastan en reparaciones o quién tiene un equipo que debió devolverse hace una semana.
+
+Tu objetivo será desarrollar un módulo personalizado en Odoo que digitalice todo el flujo de inventario, mantenimiento y préstamos, integrando además una interfaz web pública y una API para terceros.
 
 
-## 1. Objetivo
+## 2. Arquitectura de datos
 
-En este proyecto actuaréis como desarrolladores backend. Un cliente real no os dará un diagrama de base de datos, sino una lista de problemas. Vuestra misión es interpretar esas necesidades y convertirlas en una estructura de módulos de Odoo funcional.
+**NOTA**: en este texto referencio el módulo como `tech`, pero en tu caso el módulo se deberá llamar `tech_iniciales` donde inciales son las de tu nombre.
 
-El ciente *TechSchool Solutions* e un centro educativo que presta material tecnológico (portátiles, tablets, cámaras) a alumnos y profesores. Actualmente usan una libreta de papel y es un desastre.
+El sistema debe basarse en **al menos 3 modelos relacionales** propios (además de los nativos de Odoo como `res.partner`).
+
+### A. Modelo: Categorías de inventario (`tech.category`)
+
+Define las reglas de préstamo para categorías de equipos.
+
+- **Campos:** Nombre (ej: "Portátiles", "Drones"), Descripción.
+- **Regla de Negocio:** Campo `max_days_loan` (Entero). Define cuántos días máximos se puede prestar un equipo de esta categoría por defecto.
+
+### B. Modelo: Activos / Equipos (`tech.asset`)
+
+Representa el objeto físico.
+
+- **Campos:** Nombre, Número de Serie (Unique), Fecha de Compra, Coste, Imagen.
+- **Estado:** Campo `Selection` (Disponible, Prestado, En Mantenimiento, Baja).
+- **Relaciones:**
+  - Con **Categorías**, ya que cada equipo pertenece a una categoría.
+  - Con **Mantenimientos**, donde se verá el historial de mantenimientos de cada equipo.
 
 
-## 2. Requerimientos del cliente
+### C. Modelo: Gestión de mantenimiento (`tech.maintenance`)
 
-Debéis desarrollar una solución que cubra estas tres necesidades fundamentales:
+Registro de incidencias y reparaciones.
 
-### A. El catálogo de equipos (Inventario)
+- **Campos:** Descripción de la avería, Fecha de inicio, Fecha de fin, Coste de reparación.
+- **Relaciones:**
+  - Con **Activos**, para indicar a qué equipo corresponde la avería.
+  - Con `res.users` para hacer referencia al técnico responsable de la avería.
 
-Necesitan una "base de datos" donde registrar cada aparato físico que posee el centro.
 
-- **Datos necesarios:** nombre del equipo, Número de Serie (único), Modelo y Estado (si funciona o está roto).
-- **Organización:** los equipos deben estar clasificados por "Categoría" (ej: Ordenadores, Periféricos, Cables).
+Al crear un mantenimiento activo, el estado del **Activo** asociado debe cambiar automáticamente a *En Mantenimiento*.
 
-### B. El control de préstamos (La Lógica)
 
-Necesitan registrar quién se lleva algo y cuándo.
+### D. Modelo: Control de préstamos (`tech.loan`)
 
-* Se debe poder seleccionar un **Equipo** y un **Usuario** (usad el modelo `res.partner` que ya trae Odoo).
-* Debe tener Fecha de Préstamo y Fecha de Devolución.
-* **Validación Automática (Importante):** El sistema **no debe permitir** crear un préstamo nuevo para un equipo si ese equipo ya está prestado a otra persona y no ha sido devuelto. *Esto debéis programarlo con una restricción en Python.*
+El registro transaccional de quién tiene qué.
 
-### C. Consulta Externa (API Web)
-
-El equipo de desarrollo web del cliente quiere mostrar en su página pública qué equipos están libres.
-
-* Necesitan que creéis una dirección web (URL) simple.
-* Al entrar en esa dirección, el navegador debe mostrar un texto o JSON con la lista de equipos disponibles.
-
----
-
-## 3. Especificaciones Técnicas
-
-### Estructura de Módulos
-
-El código debe estar organizado en módulos. Podéis hacer uno solo (ej: `tech_management`) o separarlo en dos, pero debe tener su estructura correcta:
-
-* Carpeta `models` (código Python).
-* Carpeta `views` (archivos XML).
-* Archivo `__manifest__.py` con las dependencias correctas (`base`).
-
-### Interfaz (Vistas)
-
-No se pide diseño avanzado, solo funcionalidad:
-
-* **Vista Lista (Tree):** Para ver el listado de equipos y préstamos.
-* **Vista Formulario (Form):** La vista básica que genera Odoo para poder crear y editar los registros.
-
-### Despliegue (Docker)
-
-El proyecto debe entregarse listo para "levantar y usar".
-
-* Debéis incluir un archivo `docker-compose.yml`.
-* Este archivo debe arrancar dos servicios:
-1. **Base de Datos** (PostgreSQL).
-2. **Odoo** (conectado a esa base de datos y con acceso a vuestra carpeta de módulos).
+- **Campos:** Fecha Préstamo, Fecha Devolución Prevista, Estado (Borrador, Confirmado, Devuelto).
+- **Relaciones:** vincula un **Activo** con un **Usuario** (`res.partner`).
+- **Lógica de Fechas:** al seleccionar el equipo, la "Fecha Devolución Prevista" debe calcularse sola sumando los días configurados en su **Categoría**.
 
 
 
----
+## 3. Lógica de Negocio y restricciones
 
-## 4. Entregables
+El sistema debe ser robusto y prevenir errores humanos mediante validaciones en el código Python:
 
-Subir un archivo comprimido (.zip) o enlace al repositorio git con:
-
-1. **Código Fuente:** La carpeta de vuestro módulo.
-2. **Docker Compose:** El archivo `.yml` para levantar el entorno.
-3. **Instrucciones (Léeme):** Un archivo de texto breve explicando:
-* Nombre del módulo a instalar.
-* Usuario y contraseña de acceso al Odoo.
-* La URL exacta para probar la parte de la API Web.
+1. **Integridad del préstamo:** no se puede crear un préstamo para un equipo si su estado actual es "Prestado", "En Mantenimiento" o "Baja".
+2. **Bloqueo de morosos:** el sistema debe impedir prestar equipos a un usuario (`res.partner`) que tenga préstamos activos cuya "Fecha Devolución Prevista" sea anterior a la fecha actual (préstamos caducados).
+3. **Gestión de estados:** al confirmar un préstamo, el estado del equipo pasa a "Prestado". Al registrar la devolución, vuelve a "Disponible".
 
 
 
----
+## 4. Desarrollo Frontend 
 
-## 5. Criterios de Evaluación
+El cliente necesita un catálogo público para que los alumnos consulten el material desde sus casas sin entrar al backend.
 
-| Criterio | Peso | Qué se valora |
-| --- | --- | --- |
-| **Estructura de Datos** | **30%** | ¿Están bien creados los Modelos? ¿Usáis correctamente `Many2one` para la Categoría y el Usuario? |
-| **Lógica Python (Constraints)** | **30%** | ¿El sistema impide realmente prestar un equipo que ya está ocupado? (Esta es la parte más importante de programación). |
-| **API / Controller** | **20%** | ¿Funciona la ruta web `@http.route`? ¿Muestra datos reales de la base de datos? |
-| **Funcionamiento General** | **20%** | El `docker-compose` levanta sin errores. Se pueden crear, editar y guardar registros desde las vistas lista/formulario. |
+En la URL `/iniciales/catalog/assets` (donde iniciales son las de tu nombre) mostrará una página web generada de forma dinámica que mostrará un listado de todos los activos que hay en el sistema.
 
----
 
-### Pista para la API
 
-Recordad que para hacer una página web o API en Odoo, necesitáis crear un archivo en una carpeta `controllers` y usar el decorador `@http.route`. No hace falta autenticación compleja, con `auth='public'` es suficiente para este nivel.
+
+## 5. API RESTful
+
+El equipo de IT tiene una App móvil para los bedeles del centro y necesita consultar la base de datos en tiempo real.
+
+- **Endpoint:** `/iniciales/api/assets`
+- **Método:** `GET`
+- **Autenticación:** sin autenticación
+- **Funcionalidad:**
+  - Debe devolver un **JSON** con la lista de equipos.
+  - Debe aceptar un parámetro en la URL `?state=available` que filtre la respuesta para mostrar solo los equipos disponibles.
+
+
+* **Estructura JSON Respuesta:**
+```json
+{
+    "total_items": 15,
+    "items": [
+        {
+            "id": 10,
+            "name": "Cámara Canon EOS",
+            "serial_number": "CN-998877",
+            "category": "Audiovisual",
+            "status": "available"
+        },
+        ...
+    ]
+}
+
+```
+
+
+## 6. Entrega del proyecto
+
+El proyecto se entregará en la tarea creada a tal efecto en Teams y consistirá en:
+
+- Código fuente del módulo comprimido en formato ZIP
+- Vídeo donde se mostrará la funcionalidad del módulo con una duración no superior a 10 minutos
+- Una breve memoria (con 2 o 3 páginas es suficiente) que contenga la estructura del modelo, decisiones tomadas y problemas encontrados.
+
+
+## 7. Calificación
+
+Para la calificación del proyecto se tendrán en cuenta los siguientes apartados.
+
+1. **Backend y modelado de datos (35%)**: estructura de la base de datos y relaciones.
+2. **Lógica de negocio y automatización (25%)**: Python, restricciones y cálculos.
+3. **Frontend y API (25%)**: página web QWeb y Endpoint REST.
+4. **Entregables y calidad (15%)**: código limpio, memoria y vídeo.
+
