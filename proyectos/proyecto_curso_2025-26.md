@@ -88,6 +88,7 @@ El equipo de IT tiene una App móvil para los bedeles del centro y necesita cons
 
 
 * **Estructura JSON Respuesta:**
+
 ```json
 {
     "total_items": 15,
