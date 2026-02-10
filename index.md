@@ -43,7 +43,7 @@
 | `PR0606`   | [PR0606: Gestión de un taller mecánico](./repaso/rep01_gestion_taller.md)               | **28/01/2026** | `RA5`     |
 | **UT07** | **Web Controllers y cliente web**                                                                          |
 | `PR0701`   | [PR0701: Página estática y dinámica](./ut07_web_controllers/pr0701_pagina_estatica_dinamica.md)|                | `RA5`     |
-| `PR0702`   | [PR0702: API REST](./ut07_web_controllers/pr0701_pagina_estatica_dinamica.md)                           |                | `RA5`     |
+| `PR0702`   | [PR0702: API REST](./ut07_web_controllers/pr0702_api_rest.md)                           |                | `RA5`     |
 | **----** | **Proyecto**                                                                          |
 | `PROYECTO`   | [Proyecto Final SGE](./proyectos/proyecto_curso_2025-26.md)|                | `RA5`     |
 |                                                                                                                       |
